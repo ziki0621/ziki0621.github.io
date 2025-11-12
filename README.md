@@ -1,76 +1,38 @@
+[![ziki0621](https://img.shields.io/badge/ziki0621-github-blue?logo=github)](https://github.com/ziki0621)
 
+# Ziqi Zhang Ziki (张子奇), PolyU
 
-![Github Forks](https://img.shields.io/github/forks/senli1073/senli1073.github.io?style=flat)
-![Github Stars](https://img.shields.io/github/stars/senli1073/senli1073.github.io?style=flat)
-![License](https://img.shields.io/github/license/senli1073/senli1073.github.io)
-![Last Commit](https://img.shields.io/github/last-commit/senli1073/senli1073.github.io)
+**Linguistics & AI Student** at The Hong Kong Polytechnic University
 
-# A simple Github Pages template for personal academic websites.
+## 👋 About Me
 
-## Preview
-[![Screenshot of the Website](https://raw.githubusercontent.com/senli1073/senli1073.github.io/main/screenshot_full.png)](https://senli1073.github.io/)
+Hi! I'm Ziqi Zhang (张子奇), you can call me Ziki. I'm currently pursuing a B.A. in Linguistics & Translation with a secondary major in AI & Data Analytics at The Hong Kong Polytechnic University.
 
+## 🔬 Research Interests
 
-## Introduction
+- Natural Language Processing
+- Computational Linguistics
+- Chinese Language Processing
+- Large Language Models
 
-This personal academic website template is based on [bootstrap](https://github.com/StartBootstrap/startbootstrap-new-age).
+## 📚 Education
 
-The template is designed to integrate Markdown files as content input.  There's no need to compile the webpage before deployment.  Upon loading, the Markdown files are automatically parsed and embedded into the page.
+**The Hong Kong Polytechnic University** (2022-2026)  
+B.A. in Linguistics & Translation  
+Secondary Major in AI & Data Analytics
 
-This template supports LaTeX formula input. You can use `$...$` and `\(...\)` as delimiters for inline-math, or use `$$...$$` and `\[...\]` as delimiters for display-math. Macros such as `\ref{...}`, `\eqref{...}`, and `\begin{equation}...\end{equation}` are also supported. See [MathJax](https://docs.mathjax.org/en/latest/index.html) for more details.
+## 📫 Contact
 
-:milky_way: Demo: https://senli1073.github.io/
+- Email: zhangziqi.bram[at]gmail.com
+- GitHub: [ziki0621](https://github.com/ziki0621)
 
+## 🎵 Personal Interests
 
-## Getting Start
-### 1. Fork this repository
-The repository name should be `<username>.github.io`, which will also be your website's URL.
+- First Flute at PolyU Choir
+- Hiking
+- Badminton
+- Writing
 
+---
 
-### 2. Edit page content
-
-(1) Go to the folder where you want to store your project, and clone the new repository:
-```
-git clone https://github.com/<username>/<username>.github.io.git
-```
-The directory structure is as follows:
-
-```.
-.
-├── contents
-└── static
-    ├── assets
-    │   └── img
-    ├── css
-    └── js
-```
-
-(2) Modify the content of each section, which corresponds to `contents/*.md`.
-
-(3) Adjust the title, copyright information, and other text of the website in `contents/config.yml`
-
-(4) Replace background image and photo with new ones for your web pages in `static/assets/img/`
-
-(5) Push it: 
-```
-git commit -am 'init'
-git push
-```
-
-### 3. Setup
-(1) Under your repository name, click `Settings`.
-
-(2) In the "Code and automation" section of the sidebar, click `Pages`.
-
-(3) Under "Build and deployment", under "Source", select Deploy from a branch. Then, use the branch dropdown menu and select a publishing source.
-
-### 4. Enjoy
-
-Fire up a browser and go to `https://<username>.github.io`
-
-> Note that it can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub.
-
-
-## License
-
-Copyright Sen Li, 2023-2025. Licensed under an MIT license. You can copy and mess with this template.
+*This website is built using [academic-website-template](https://github.com/senli1073/senli1073.github.io)*
