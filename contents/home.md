@@ -5,7 +5,7 @@
 Hi! This is Ziki! 
 
 #### Contact
-Email: zhangziqi.bram[at]gmail.com or blameredens.zhang@connect.polyu.hk
+Email: zhangziqi.bram@gmail.com or blameredens.zhang@connect.polyu.hk
 
 #### Education Background
 B.A., Linguistics & Translation, The Hong Kong Polytechnic University, 2022-2026;\
@@ -15,5 +15,5 @@ Secondary Major in AI & Data Analytics, The Hong Kong Polytechnic University, 20
 Natural Language Processing, Computational Linguistics.
 
 #### Personal Interests
-PolyU Choir' First Flute\
-Hiking, Badminton, Writing... ... 
+PolyU Choir' First Flute, Hiking, Badminton, Writing...
+

@@ -1,1 +1,1 @@
-Current no awards :P
+Currently no awards :P
