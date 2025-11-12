@@ -1,17 +1,20 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![ziki0621](https://img.shields.io/badge/ziki0621-github-blue?logo=github)](https://github.com/ziki0621)
 
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+Hi! This is Ziki Zhang, nice to meet you!
 
 #### Contact
 
-Email: senli[at]fas.harvard.edu
+Email: zhangziqi.bram[at]gmail.com
 
-#### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+#### Education Background
+B.A., Linguistics & Translation, The Hong Kong Polytechnic University, 2022-2026;\
+Secondary Major in AI & Data Analytics, The Hong Kong Polytechnic University, 2023-2026
 
 #### Research Interests
-Deep Learning, Artificial Intelligence Seismology, Mine Microseismic.
+Natural Language Processing, Computational Linguistics.
 
+#### Personal Interests
+PolyU Choir' First Flute\
+Hiking, Badminton, Writing... ... 
