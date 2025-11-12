@@ -2,11 +2,10 @@
 
 [![ziki0621](https://img.shields.io/badge/ziki0621-github-blue?logo=github)](https://github.com/ziki0621)
 
-Ziki Ziqi Zhang's Homepage
+Hi! This is Ziki! 
 
 #### Contact
-
-Email: zhangziqi.bram[at]gmail.com
+Email: zhangziqi.bram[at]gmail.com or blameredens.zhang@connect.polyu.hk
 
 #### Education Background
 B.A., Linguistics & Translation, The Hong Kong Polytechnic University, 2022-2026;\
