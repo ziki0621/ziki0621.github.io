@@ -15,5 +15,5 @@ Secondary Major in AI & Data Analytics, The Hong Kong Polytechnic University, 20
 Natural Language Processing, Computational Linguistics.
 
 #### Personal Interests
-PolyU Choir' First Flute, Hiking, Badminton, Writing...
+PolyU Orchestra' First Flute(2023-2025), Hiking, Badminton, Writing...
 
