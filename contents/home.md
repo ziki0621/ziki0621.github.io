@@ -2,7 +2,7 @@
 
 [![ziki0621](https://img.shields.io/badge/ziki0621-github-blue?logo=github)](https://github.com/ziki0621)
 
-Hi! This is Ziki Zhang, nice to meet you!
+Hi! This is Ziki Zhang, nice to meet you! I'm now a year 4 undergraduate student in PolyU.  
 
 #### Contact
 
