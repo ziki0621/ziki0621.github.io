@@ -15,7 +15,7 @@
 
 .top-section {
     position: relative;
-    padding: 6rem 0;           /* 原 10rem → 6rem，顶部更紧凑 */
+    padding: 5rem 0;                     /* 原 10rem → 5rem，顶部大幅收紧 */
     background-position: center;
     background-size: cover;
     height: 25rem;
@@ -40,21 +40,25 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* === 重点：黑体 + 紧凑排版 === */
+/* === 恢复原字体，字号不变，但行高、间距更紧凑 === */
 section header h2 {
-    font-family: "SimHei", "Microsoft YaHei", "WenQuanYi Micro Hei", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
     color: var(--h-title-color);
-    font-size: 2rem;           /* 原 2.3rem → 2rem */
-    line-height: 2.8rem;       /* 原 4rem → 2.8rem */
-    margin-bottom: 0.5rem;     /* 增加控制段落间距 */
+    font-size: 2.3rem;                   /* 保持原大小 */
+    line-height: 3.2rem;                 /* 原 4rem → 3.2rem，收紧 20% */
+    margin: 0 0 0.6rem 0;                /* 控制标题下间距 */
 }
 
 section .main-body {
-    font-family: "SimHei", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
-    font-size: 1.1rem;         /* 原 1.3rem → 1.1rem */
-    font-weight: 400;          /* 原 200 → 400，黑体更适合正常粗细 */
-    line-height: 1.8rem;       /* 原 2.4rem → 1.8rem */
-    margin-bottom: 1rem;
+    font-size: 1.3rem;                   /* 保持原大小 */
+    font-weight: 200;
+    line-height: 2rem;                   /* 原 2.4rem → 2rem，收紧 ~17% */
+    margin-bottom: 0.8rem;               /* 段落间距收紧 */
+}
+
+/* 可选：段落 <p> 更紧凑 */
+section .main-body p {
+    margin-bottom: 0.6rem;
 }
 
 .bg-gradient-primary-to-secondary-light {
@@ -72,7 +76,7 @@ section .main-body {
 
 .top-bg {
     background-position: center;
-    background-size: cover;    /* 修正：fill → cover，防止变形 */
+    background-size: cover;              /* 修正：fill → cover */
     width: 100%;
     height: 100%;
 }
@@ -87,21 +91,20 @@ section .main-body {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* === 头像更紧凑 === */
+/* === 头像更紧凑：上漂减少，尺寸微调 === */
 #avatar {
     position: relative;
     height: 0;
-    top: min(-50px, max(-80px, calc(-1*100vw/14)));  /* 原 -65/-100 → -50/-80，更少上漂 */
+    top: min(-55px, max(-85px, calc(-1*100vw/13)));  /* 原 -65/-100 → -55/-85 */
     max-width: 55em;
-    margin: 0 1rem 0 0;        /* 右边距稍减 */
+    margin: 0 0.8rem 0 0;                /* 右边距收紧 */
     float: right;
     z-index: 9000;
 }
 
 #avatar img {
-    height: max(110px, min(160px, calc(100vw/7)));  /* 原 130-200 → 110-160 */
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;        /* 可选：圆角更现代 */
+    height: max(125px, min(180px, calc(100vw/6.5))); /* 原 130-200 → 125-180 */
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.18);
 }
 
 @media screen and (max-width: 991px) {
@@ -109,13 +112,16 @@ section .main-body {
         margin: 0;
     }
     
+    /* 小屏也保持紧凑 */
     section header h2 {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
+        font-size: 2.1rem;
+        line-height: 2.8rem;
+        margin-bottom: 0.5rem;
     }
     
     section .main-body {
-        font-size: 1rem;
-        line-height: 1.6rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-bottom: 0.6rem;
     }
 }
