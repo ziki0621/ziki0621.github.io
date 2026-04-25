@@ -42,7 +42,7 @@
 | 学校 | `The Hong Kong Polytechnic University` |
 | 专业 | `B.A. Linguistics & Translation · AI & Data Analytics (Secondary Major)` |
 | 课程 | `Coursework: Machine Learning, AI, Data Structures, NLP` |
-| 照片 | `images/photo-profile.jpg`（靠右显示，140×186） |
+| 照片 | `images/photo-profile.jpg`（靠右显示，180×240） |
 
 ---
 

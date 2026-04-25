@@ -157,7 +157,7 @@ nav {
 .work-item { display: flex; gap: 40px; padding: 32px 0; border-top: 1px solid var(--line); align-items: flex-start; }
 .work-photo { flex-shrink: 0; }
 .profile-img {
-    width: 140px; height: 186px; border-radius: 8px;
+    width: 180px; height: 240px; border-radius: 8px;
     object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
