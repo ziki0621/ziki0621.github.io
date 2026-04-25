@@ -3,13 +3,13 @@
    ============================ */
 
 :root {
-    --bg: #f6f7f4;
-    --text: #1a2f1d;
-    --text-secondary: #5a6b5a;
-    --text-light: #8a9a8a;
-    --accent: #2d4a33;
-    --accent-hover: #1a2f1d;
-    --line: #e0e4de;
+    --bg: #f0fdfa;
+    --text: #134e4a;
+    --text-secondary: #5b8a84;
+    --text-light: #94b5b0;
+    --accent: #0d9488;
+    --accent-hover: #0f766e;
+    --line: #cce4df;
     --max-width: 720px;
     --font-sans: 'Times New Roman', Times, Georgia, serif;
     --font-serif: 'Times New Roman', Times, Georgia, serif;
@@ -28,7 +28,7 @@ body {
 }
 
 /* Selection */
-::selection { background: #2d4a33; color: #fff; }
+::selection { background: #0d9488; color: #fff; }
 
 /* ============================
    Navigation
@@ -87,7 +87,7 @@ nav {
 .hero {
     min-height: 100vh; display: flex; align-items: center;
     padding: 120px 32px 80px;
-    background: linear-gradient(160deg, #1a2f1d 0%, #2d4a33 50%, #1a2f1d 100%);
+    background: linear-gradient(165deg, #0f766e 0%, #14b8a6 40%, #0d9488 100%);
     color: #fff; overflow: hidden;
     position: relative;
 }
@@ -131,6 +131,24 @@ nav {
 .meta-item { display: flex; flex-direction: column; gap: 4px; }
 .meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.3); font-weight: 500; }
 .meta-value { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+/* Hero grass animation */
+.hero-grass {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 70px; pointer-events: none; overflow: hidden;
+}
+.grass-blade {
+    position: absolute; bottom: 0;
+    width: 6px;
+    background: linear-gradient(to top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: 3px 3px 0 0;
+    transform-origin: bottom center;
+    animation: grassSway 2.5s ease-in-out infinite;
+}
+@keyframes grassSway {
+    0%, 100% { transform: rotate(-6deg) scaleX(0.9); }
+    50% { transform: rotate(6deg) scaleX(1.1); }
+}
 
 /* Work / Education photo */
 .work-item { display: flex; gap: 40px; padding: 32px 0; border-top: 1px solid var(--line); align-items: flex-start; }
