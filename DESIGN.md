@@ -30,6 +30,7 @@
 | 简介文字 | `I'm a researcher exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at PolyU.` |
 | Currently | `B.A. Linguistics & AI · PolyU` |
 | Research | `LLM Interpretability · Cognitive Science` |
+| 头像照片 | `images/photo-avatar.jpg`（圆形裁剪，200×200） |
 
 ---
 
@@ -41,6 +42,7 @@
 | 学校 | `The Hong Kong Polytechnic University` |
 | 专业 | `B.A. Linguistics & Translation · AI & Data Analytics (Secondary Major)` |
 | 课程 | `Coursework: Machine Learning, AI, Data Structures, NLP` |
+| 照片 | `images/photo-profile.jpg`（靠右显示，140×186） |
 
 ---
 
@@ -185,7 +187,10 @@ ziqi-website/
 │   │   └── style.css # 样式
 │   └── js/
 │       └── main.js   # 交互效果
-├── images/           # 🖼️ 放图片（你放这里）
+├── images/           # 🖼️ 放图片
+│   ├── photo-avatar.jpg    # Hero 头像（圆形裁剪）
+│   ├── photo-profile.jpg   # Education 区照片
+│   └── photo.jpg           # 原始照片
 ├── files/            # 📎 放 PDF 等文件（你放这里）
 ├── DESIGN.md         # ← 就是这个文件
 ├── render.yaml       # Render 部署配置

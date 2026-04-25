@@ -95,7 +95,17 @@ nav {
     content: ''; position: absolute; top: 0; right: 0; width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
 }
-.hero-text { max-width: var(--max-width); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+.hero-text { max-width: 540px; position: relative; z-index: 1; }
+.hero-content {
+    max-width: var(--max-width); margin: 0 auto; width: 100%;
+    display: flex; align-items: center; justify-content: space-between; gap: 60px;
+}
+.hero-avatar { flex-shrink: 0; }
+.avatar-img {
+    width: 200px; height: 200px; border-radius: 50%;
+    object-fit: cover; border: 3px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
 
 .hero-label {
     font-size: 0.82rem; text-transform: uppercase; letter-spacing: 3px;
@@ -122,10 +132,19 @@ nav {
 .meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.3); font-weight: 500; }
 .meta-value { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
 
-.hero-visual { display: none; }
+/* Work / Education photo */
+.work-item { display: flex; gap: 40px; padding: 32px 0; border-top: 1px solid var(--line); align-items: flex-start; }
+.work-photo { flex-shrink: 0; }
+.profile-img {
+    width: 140px; height: 186px; border-radius: 8px;
+    object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
 
 @media (max-width: 600px) {
     .hero { padding: 100px 20px 60px; }
+    .hero-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .hero-text { max-width: 100%; }
+    .avatar-img { width: 140px; height: 140px; }
     .heading-line { font-size: 2rem; letter-spacing: -0.5px; }
     .hero-desc { font-size: 0.9rem; }
     .hero-meta { flex-direction: column; gap: 20px; }
@@ -156,8 +175,8 @@ nav {
    Work / Education
    ============================ */
 .work-item {
-    display: flex; gap: 40px; padding: 32px 0;
-    border-top: 1px solid var(--line);
+    display: flex; gap: 40px; padding: 32px 0; border-top: 1px solid var(--line);
+    align-items: flex-start;
 }
 .work-year {
     font-size: 0.85rem; color: var(--text-secondary);
