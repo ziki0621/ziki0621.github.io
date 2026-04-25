@@ -3,13 +3,13 @@
    ============================ */
 
 :root {
-    --bg: #f0fdfa;
-    --text: #134e4a;
-    --text-secondary: #5b8a84;
-    --text-light: #94b5b0;
-    --accent: #0d9488;
-    --accent-hover: #0f766e;
-    --line: #cce4df;
+    --bg: #f0fdf4;
+    --text: #14532d;
+    --text-secondary: #558b5a;
+    --text-light: #8aae8a;
+    --accent: #16a34a;
+    --accent-hover: #15803d;
+    --line: #c8e0cc;
     --max-width: 720px;
     --font-sans: 'Times New Roman', Times, Georgia, serif;
     --font-serif: 'Times New Roman', Times, Georgia, serif;
@@ -28,7 +28,7 @@ body {
 }
 
 /* Selection */
-::selection { background: #0d9488; color: #fff; }
+::selection { background: #16a34a; color: #fff; }
 
 /* ============================
    Navigation
@@ -87,7 +87,7 @@ nav {
 .hero {
     min-height: 100vh; display: flex; align-items: center;
     padding: 120px 32px 80px;
-    background: linear-gradient(165deg, #0f766e 0%, #14b8a6 40%, #0d9488 100%);
+    background: linear-gradient(165deg, #15803d 0%, #22c55e 50%, #16a34a 100%);
     color: #fff; overflow: hidden;
     position: relative;
 }
@@ -139,15 +139,18 @@ nav {
 }
 .grass-blade {
     position: absolute; bottom: 0;
-    width: 6px;
-    background: linear-gradient(to top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
+    width: 5px;
+    background: linear-gradient(to top, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.04) 100%);
     border-radius: 3px 3px 0 0;
     transform-origin: bottom center;
-    animation: grassSway 2.5s ease-in-out infinite;
+    animation: grassSway var(--sway-duration, 2.5s) ease-in-out infinite;
+    animation-delay: var(--sway-delay, 0s);
 }
+.grass-blade:nth-child(odd) { width: 4px; border-radius: 2px 2px 0 0; }
+.grass-blade:nth-child(3n) { width: 6px; }
 @keyframes grassSway {
-    0%, 100% { transform: rotate(-6deg) scaleX(0.9); }
-    50% { transform: rotate(6deg) scaleX(1.1); }
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
 }
 
 /* Work / Education photo */

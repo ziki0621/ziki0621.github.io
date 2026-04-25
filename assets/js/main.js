@@ -15,6 +15,26 @@ navLinks?.querySelectorAll('a').forEach(link => {
     });
 });
 
+// Generate grass blades
+const grassContainer = document.getElementById('heroGrass');
+if (grassContainer) {
+    const count = 60;
+    for (let i = 0; i < count; i++) {
+        const blade = document.createElement('div');
+        blade.className = 'grass-blade';
+        const left = (i / count) * 100 + Math.random() * (100 / count);
+        const height = 25 + Math.random() * 45;
+        blade.style.cssText = `
+            left: ${left}%;
+            height: ${height}px;
+            --sway-duration: ${2 + Math.random() * 1.5}s;
+            --sway-delay: ${Math.random() * 2}s;
+            opacity: ${0.5 + Math.random() * 0.5};
+        `;
+        grassContainer.appendChild(blade);
+    }
+}
+
 // Scroll-triggered fade-in
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
