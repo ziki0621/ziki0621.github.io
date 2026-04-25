@@ -3,13 +3,13 @@
    ============================ */
 
 :root {
-    --bg: #f0fdf4;
-    --text: #14532d;
-    --text-secondary: #558b5a;
-    --text-light: #8aae8a;
-    --accent: #16a34a;
-    --accent-hover: #15803d;
-    --line: #c8e0cc;
+    --bg: #faf9f6;
+    --text: #1a1a1a;
+    --text-secondary: #6b6b6b;
+    --text-light: #a0a0a0;
+    --accent: #2b2b2b;
+    --accent-hover: #000;
+    --line: #e8e7e4;
     --max-width: 720px;
     --font-sans: 'Times New Roman', Times, Georgia, serif;
     --font-serif: 'Times New Roman', Times, Georgia, serif;
@@ -28,7 +28,7 @@ body {
 }
 
 /* Selection */
-::selection { background: #16a34a; color: #fff; }
+::selection { background: #1a1a1a; color: #fff; }
 
 /* ============================
    Navigation
@@ -87,7 +87,7 @@ nav {
 .hero {
     min-height: 100vh; display: flex; align-items: center;
     padding: 120px 32px 80px;
-    background: linear-gradient(165deg, #15803d 0%, #22c55e 50%, #16a34a 100%);
+    background: linear-gradient(160deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
     color: #fff; overflow: hidden;
     position: relative;
 }
