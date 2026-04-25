@@ -127,7 +127,7 @@ nav {
 }
 .hero-desc a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
-.hero-meta { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
+.hero-meta { display: flex; gap: 40px; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); }
 .meta-item { display: flex; flex-direction: column; gap: 4px; }
 .meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.3); font-weight: 500; }
 .meta-value { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
@@ -176,9 +176,9 @@ nav {
    ============================ */
 .section {
     max-width: var(--max-width); margin: 0 auto;
-    padding: 50px 32px;
+    padding: 36px 32px;
 }
-.section-compact { padding: 40px 32px 50px; }
+.section-compact { padding: 24px 32px 36px; }
 
 .section-header {
     display: flex; align-items: baseline; gap: 16px;
@@ -196,7 +196,7 @@ nav {
    Work / Education
    ============================ */
 .work-item {
-    display: flex; gap: 40px; padding: 32px 0; border-top: 1px solid var(--line);
+    display: flex; gap: 28px; padding: 24px 0; border-top: 1px solid var(--line);
     align-items: flex-start;
 }
 .work-year {
@@ -216,7 +216,7 @@ nav {
    Publications
    ============================ */
 .pub-item {
-    display: flex; gap: 32px; padding: 36px 0;
+    display: flex; gap: 24px; padding: 26px 0;
     border-top: 1px solid var(--line);
 }
 .pub-item:last-of-type { border-bottom: 1px solid var(--line); }
@@ -248,7 +248,7 @@ nav {
    Projects
    ============================ */
 .project-item {
-    padding: 36px 0; border-top: 1px solid var(--line);
+    padding: 26px 0; border-top: 1px solid var(--line);
 }
 .project-item:last-of-type { padding-bottom: 0; }
 
@@ -277,7 +277,7 @@ nav {
 .activities { display: flex; flex-direction: column; gap: 0; }
 .activity-item {
     display: flex; gap: 16px; align-items: flex-start;
-    padding: 20px 0; border-top: 1px solid var(--line);
+    padding: 16px 0; border-top: 1px solid var(--line);
     font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;
 }
 .activity-item strong { color: var(--text); font-weight: 600; }
@@ -291,18 +291,18 @@ nav {
    ============================ */
 .section-contact {
     background: var(--text); color: #fff;
-    padding: 50px 32px;
+    padding: 40px 32px;
 }
 .contact-inner {
     max-width: var(--max-width); margin: 0 auto; text-align: center;
 }
 .contact-inner h2 {
     font-size: 2.4rem; font-weight: 600; letter-spacing: -1px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 .contact-inner p {
     font-size: 1rem; color: rgba(255,255,255,0.5);
-    margin-bottom: 32px; max-width: 400px; margin-left: auto; margin-right: auto;
+    margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto;
 }
 .contact-links { display: flex; align-items: center; justify-content: center; gap: 16px; }
 .contact-link {
@@ -317,7 +317,7 @@ nav {
    Footer
    ============================ */
 footer {
-    text-align: center; padding: 32px;
+    text-align: center; padding: 20px;
     font-size: 0.78rem; color: var(--text-light);
     background: var(--text);
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -346,10 +346,10 @@ footer {
    Responsive
    ============================ */
 @media (max-width: 600px) {
-    .section { padding: 32px 20px; }
-    .section-compact { padding: 32px 20px; }
+    .section { padding: 24px 20px; }
+    .section-compact { padding: 20px 20px 24px; }
     .section-header h2 { font-size: 1.4rem; }
-    .section-header { margin-bottom: 20px; }
+    .section-header { margin-bottom: 7px; }
     .contact-inner h2 { font-size: 1.8rem; }
     .contact-links { flex-wrap: wrap; gap: 12px; }
 }
