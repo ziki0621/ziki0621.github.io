@@ -27,7 +27,7 @@
 | 标签 | `Zhang Ziqi` |
 | 大标题第一行 | `Linguistics meets` |
 | 大标题第二行（斜体） | `artificial intelligence.` |
-| 简介文字 | `I'm a researcher exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at PolyU.` |
+| 简介文字 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
 | Currently | `B.A. Linguistics & AI · PolyU` |
 | Research | `LLM Interpretability · Cognitive Science` |
 | 头像照片 | `images/photo-avatar.jpg`（圆形裁剪，200×200） |
@@ -179,8 +179,8 @@
 ### 间距
 
 - 页面最大宽度：`720px`（居中）
-- 区块上下间距：`100px`
-- 区块标题距下方内容：`48px`
+- 区块上下间距：`50px`
+- 区块标题距下方内容：`28px`
 
 ---
 
