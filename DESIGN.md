@@ -53,18 +53,18 @@
 | 字段 | 当前内容 |
 |------|---------|
 | 会议 | `EMNLP 2025` |
-| 标题 | `PhonoThink: Improving Large Language Model Reasoning on Chinese Phonological Ambiguities` |
-| 作者 | `Co-author · Advised by Prof. Emmanuele Chersoni · PolyU` |
-| 摘要 | `Constructed a four-step reasoning chain dataset with homophone substitution. Trained Qwen2.5-7B via reinforcement learning, achieving 66.21% accuracy — approaching Qwen2.5-72B (71.86%) and significantly narrowing the model scale gap.` |
+| 标题 | `PhonoThink: Improving Large Language Models' Reasoning on Chinese Phonological Ambiguities` |
+| 链接 | `https://aclanthology.org/2025.emnlp-main.961/` |
+| 作者 | `Jianfei Ma, Zhaoxin Feng, Emmanuele Chersoni, Huacheng Song, **Ziqi Zhang**` |
 
 #### 论文 2
 
 | 字段 | 当前内容 |
 |------|---------|
 | 会议 | `BlackboxNLP 2025` |
-| 标题 | `From BERT to LLMs: Understanding Chinese Classifier Prediction in Language Models` |
-| 作者 | `First Author · Advised by Prof. Emmanuele Chersoni · PolyU` |
-| 摘要 | `Evaluated Chinese classifier generation across models using prompt engineering and LoRA fine-tuning. Found BERT's bidirectional attention (62.31%) outperforms larger models in this task, revealing insights about attention mechanisms in grammatical prediction.` |
+| 标题 | `From BERT to LLMs: Comparing and Understanding Chinese Classifier Prediction in Language Models` |
+| 链接 | `https://aclanthology.org/2025.blackboxnlp-1.20/` |
+| 作者 | `**Ziqi Zhang**, Jianfei Ma, Emmanuele Chersoni, Jieshun You, Zhaoxin Feng` |
 
 ---
 

@@ -230,7 +230,13 @@ nav {
     font-size: 1.05rem; font-weight: 600; margin-bottom: 4px;
     line-height: 1.4;
 }
+.pub-content h3 a {
+    color: var(--text); text-decoration: none;
+    transition: color 0.2s;
+}
+.pub-content h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .pub-authors { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 10px; }
+.pub-authors strong { color: var(--text); font-weight: 600; }
 .pub-abstract { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
 
 @media (max-width: 600px) {
