@@ -18,7 +18,7 @@ navLinks?.querySelectorAll('a').forEach(link => {
 // Generate grass blades
 const grassContainer = document.getElementById('heroGrass');
 if (grassContainer) {
-    const count = 60;
+    const count = 120;
     for (let i = 0; i < count; i++) {
         const blade = document.createElement('div');
         blade.className = 'grass-blade';
