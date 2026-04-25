@@ -176,13 +176,13 @@ nav {
    ============================ */
 .section {
     max-width: var(--max-width); margin: 0 auto;
-    padding: 100px 32px;
+    padding: 50px 32px;
 }
-.section-compact { padding: 80px 32px 100px; }
+.section-compact { padding: 40px 32px 50px; }
 
 .section-header {
     display: flex; align-items: baseline; gap: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
 }
 .section-number {
     font-size: 0.8rem; font-weight: 500; color: var(--text-light);
@@ -285,7 +285,7 @@ nav {
    ============================ */
 .section-contact {
     background: var(--text); color: #fff;
-    padding: 80px 32px;
+    padding: 50px 32px;
 }
 .contact-inner {
     max-width: var(--max-width); margin: 0 auto; text-align: center;
@@ -340,10 +340,10 @@ footer {
    Responsive
    ============================ */
 @media (max-width: 600px) {
-    .section { padding: 64px 20px; }
-    .section-compact { padding: 64px 20px; }
+    .section { padding: 32px 20px; }
+    .section-compact { padding: 32px 20px; }
     .section-header h2 { font-size: 1.4rem; }
-    .section-header { margin-bottom: 32px; }
+    .section-header { margin-bottom: 20px; }
     .contact-inner h2 { font-size: 1.8rem; }
     .contact-links { flex-wrap: wrap; gap: 12px; }
 }
