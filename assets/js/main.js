@@ -15,23 +15,23 @@ navLinks?.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Generate grass blades
-const grassContainer = document.getElementById('heroGrass');
-if (grassContainer) {
-    const count = 120;
+// Generate spotlights
+const spotlightContainer = document.getElementById('heroSpotlights');
+if (spotlightContainer) {
+    const count = 7;
     for (let i = 0; i < count; i++) {
-        const blade = document.createElement('div');
-        blade.className = 'grass-blade';
-        const left = (i / count) * 100 + Math.random() * (100 / count);
-        const height = 25 + Math.random() * 45;
-        blade.style.cssText = `
-            left: ${left}%;
-            height: ${height}px;
-            --sway-duration: ${2 + Math.random() * 1.5}s;
-            --sway-delay: ${Math.random() * 2}s;
-            opacity: ${0.5 + Math.random() * 0.5};
+        const beam = document.createElement('div');
+        beam.className = 'spotlight';
+        const angle = -25 + (i / (count - 1)) * 50;
+        beam.style.cssText = `
+            left: ${5 + (i / (count - 1)) * 90}%;
+            height: ${350 + Math.random() * 200}px;
+            --angle: ${angle}deg;
+            opacity: ${0.4 + Math.random() * 0.4};
+            animation-delay: ${Math.random() * 2}s;
+            animation-duration: ${3.5 + Math.random() * 2}s;
         `;
-        grassContainer.appendChild(blade);
+        spotlightContainer.appendChild(beam);
     }
 }
 

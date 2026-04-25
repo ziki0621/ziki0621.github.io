@@ -132,25 +132,22 @@ nav {
 .meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.3); font-weight: 500; }
 .meta-value { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
 
-/* Hero grass animation */
-.hero-grass {
+/* Hero spotlights */
+.hero-spotlights {
     position: absolute; bottom: 0; left: 0; right: 0;
-    height: 70px; pointer-events: none; overflow: hidden;
+    height: 100%; pointer-events: none; overflow: hidden;
 }
-.grass-blade {
-    position: absolute; bottom: 0;
-    width: 8px;
-    background: linear-gradient(to top, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.03) 100%);
-    clip-path: polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%);
+.spotlight {
+    position: absolute; bottom: -80px;
+    width: 180px;
+    background: linear-gradient(to top, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 60%, transparent 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transform-origin: bottom center;
-    animation: grassSway var(--sway-duration, 2.5s) ease-in-out infinite;
-    animation-delay: var(--sway-delay, 0s);
+    animation: spotlightPulse 4s ease-in-out infinite;
 }
-.grass-blade:nth-child(odd) { clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%); }
-.grass-blade:nth-child(3n) { clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%); width: 10px; }
-@keyframes grassSway {
-    0%, 100% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
+@keyframes spotlightPulse {
+    0%, 100% { opacity: 0.6; transform: rotate(var(--angle, 0deg)) scaleY(1); }
+    50% { opacity: 1; transform: rotate(var(--angle, 0deg)) scaleY(1.05); }
 }
 
 /* Work / Education photo */
