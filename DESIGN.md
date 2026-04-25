@@ -11,9 +11,9 @@
 | 项目 | 值 |
 |------|----|
 | Logo 文字 | `Ziki` |
-| 链接1 | Work → `#work` |
-| 链接2 | Research → `#research` |
-| 链接3 | Writing → `#writing` |
+| 链接1 | Education → `#work` |
+| 链接2 | Publications → `#research` |
+| 链接3 | Projects → `#writing` |
 | 链接4 | Get in touch → `#contact`（胶囊按钮样式） |
 
 > 要修改：改下表后告诉我
