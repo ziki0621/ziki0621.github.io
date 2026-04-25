@@ -18,18 +18,20 @@ navLinks?.querySelectorAll('a').forEach(link => {
 // Generate spotlights
 const spotlightContainer = document.getElementById('heroSpotlights');
 if (spotlightContainer) {
-    const count = 7;
+    const count = 9;
+    const centerLeft = 50;
     for (let i = 0; i < count; i++) {
         const beam = document.createElement('div');
         beam.className = 'spotlight';
-        const angle = -25 + (i / (count - 1)) * 50;
+        const offset = (i / (count - 1)) * 100;
+        const angle = -35 + (i / (count - 1)) * 70;
         beam.style.cssText = `
-            left: ${5 + (i / (count - 1)) * 90}%;
-            height: ${350 + Math.random() * 200}px;
+            left: ${offset}%;
+            height: ${300 + Math.random() * 250}px;
             --angle: ${angle}deg;
-            opacity: ${0.4 + Math.random() * 0.4};
-            animation-delay: ${Math.random() * 2}s;
-            animation-duration: ${3.5 + Math.random() * 2}s;
+            opacity: ${0.6 + Math.random() * 0.4};
+            animation-delay: ${Math.random() * 3}s;
+            animation-duration: ${4 + Math.random() * 2.5}s;
         `;
         spotlightContainer.appendChild(beam);
     }
