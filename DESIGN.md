@@ -10,7 +10,7 @@
 
 | 项目 | 值 |
 |------|----|
-| Logo 文字 | `ZZ` |
+| Logo 文字 | `Ziki` |
 | 链接1 | Work → `#work` |
 | 链接2 | Research → `#research` |
 | 链接3 | Writing → `#writing` |
