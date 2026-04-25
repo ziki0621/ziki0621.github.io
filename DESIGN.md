@@ -133,9 +133,9 @@
 |------|---------|
 | 标题 | `Get in touch` |
 | 描述 | `If you're working on anything at the intersection of language and AI, I'd love to hear from you.` |
-| Email | `22101842d@connect.polyu.hk` |
-| Google Scholar | `#`（暂无链接） |
-| GitHub | `#`（暂无链接） |
+| Email | `zhangziqi.bram@gmail.com` |
+| Google Scholar | `https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra` |
+| GitHub | `https://github.com/ziki0621` |
 
 ---
 
