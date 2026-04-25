@@ -19,22 +19,31 @@ navLinks?.querySelectorAll('a').forEach(link => {
 const spotlightContainer = document.getElementById('heroSpotlights');
 if (spotlightContainer) {
     const count = 9;
-    const centerLeft = 50;
     for (let i = 0; i < count; i++) {
         const beam = document.createElement('div');
         beam.className = 'spotlight';
-        const offset = (i / (count - 1)) * 100;
-        const angle = -35 + (i / (count - 1)) * 70;
+        const initialAngle = -35 + (i / (count - 1)) * 70;
         beam.style.cssText = `
-            left: ${offset}%;
+            left: ${(i / (count - 1)) * 100}%;
             height: ${300 + Math.random() * 250}px;
-            --angle: ${angle}deg;
+            transform: rotate(${initialAngle}deg);
             opacity: ${0.6 + Math.random() * 0.4};
-            animation-delay: ${Math.random() * 3}s;
-            animation-duration: ${4 + Math.random() * 2.5}s;
         `;
         spotlightContainer.appendChild(beam);
     }
+
+    // Continuously drift spotlights for a dynamic lighting effect
+    let angles = Array.from({ length: count }, (_, i) => -35 + (i / (count - 1)) * 70);
+    function driftSpotlights() {
+        document.querySelectorAll('.spotlight').forEach((beam, i) => {
+            angles[i] += (Math.random() - 0.5) * 20;
+            angles[i] = Math.max(-50, Math.min(50, angles[i]));
+            beam.style.transform = `rotate(${angles[i]}deg)`;
+            beam.style.opacity = 0.4 + Math.random() * 0.6;
+        });
+        setTimeout(driftSpotlights, 2500 + Math.random() * 1500);
+    }
+    driftSpotlights();
 }
 
 // Scroll-triggered fade-in

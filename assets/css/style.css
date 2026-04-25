@@ -143,11 +143,14 @@ nav {
     background: linear-gradient(to top, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
     clip-path: polygon(15% 0%, 85% 0%, 60% 100%, 40% 100%);
     transform-origin: bottom center;
-    animation: spotlightPulse 5s ease-in-out infinite;
+    transition: transform 2.5s ease, opacity 2.5s ease;
 }
-@keyframes spotlightPulse {
-    0%, 100% { opacity: 0.5; transform: rotate(var(--angle, 0deg)) scaleY(1); }
-    50% { opacity: 1; transform: rotate(var(--angle, 0deg)) scaleY(1.08); }
+@keyframes spotlightBreathe {
+    0%, 100% { filter: brightness(0.6); }
+    50% { filter: brightness(1); }
+}
+.spotlight {
+    animation: spotlightBreathe 5s ease-in-out infinite;
 }
 
 /* Work / Education photo */
