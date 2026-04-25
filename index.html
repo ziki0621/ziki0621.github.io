@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhang Ziqi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo">ZZ</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#research">Research</a>
+                <a href="#writing">Writing</a>
+                <a href="#contact" class="nav-cta">Get in touch</a>
+            </div>
+            <button class="menu-btn" aria-label="Menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hero-label">Zhang Ziqi</p>
+            <h1>
+                <span class="heading-line">Linguistics meets</span>
+                <span class="heading-line accent">artificial intelligence.</span>
+            </h1>
+            <p class="hero-desc">
+                I'm a researcher exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at <a href="#">PolyU</a>.
+            </p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Currently</span>
+                    <span class="meta-value">B.A. Linguistics & AI · PolyU</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Research</span>
+                    <span class="meta-value">LLM Interpretability · Cognitive Science</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-grid">
+                <div class="grid-dot" style="--i:0"></div>
+                <div class="grid-dot" style="--i:1"></div>
+                <div class="grid-dot" style="--i:2"></div>
+                <div class="grid-dot" style="--i:3"></div>
+                <div class="grid-dot" style="--i:4"></div>
+                <div class="grid-dot" style="--i:5"></div>
+                <div class="grid-dot" style="--i:6"></div>
+                <div class="grid-dot" style="--i:7"></div>
+                <div class="grid-dot" style="--i:8"></div>
+            </div>
+            <div class="visual-label">EMNLP 2025 · BlackboxNLP 2025</div>
+        </div>
+    </section>
+
+    <!-- Work / Education -->
+    <section id="work" class="section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>Education</h2>
+        </div>
+        <div class="work-item">
+            <div class="work-year">2022 – 2026</div>
+            <div class="work-detail">
+                <h3>The Hong Kong Polytechnic University</h3>
+                <p class="work-sub">B.A. Linguistics & Translation · AI & Data Analytics (Secondary Major)</p>
+                <p class="work-extra">WGPA 3.40/4.3 · Coursework: Machine Learning, AI, Data Structures, NLP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research / Publications -->
+    <section id="research" class="section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>Publications</h2>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-venue">EMNLP 2025</div>
+            <div class="pub-content">
+                <h3>PhonoThink: Improving Large Language Model Reasoning on Chinese Phonological Ambiguities</h3>
+                <p class="pub-authors">Co-author · Advised by Prof. Emmanuele Chersoni · PolyU</p>
+                <p class="pub-abstract">Constructed a four-step reasoning chain dataset with homophone substitution. Trained Qwen2.5-7B via reinforcement learning, achieving 66.21% accuracy — approaching Qwen2.5-72B (71.86%) and significantly narrowing the model scale gap.</p>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-venue">BlackboxNLP 2025</div>
+            <div class="pub-content">
+                <h3>From BERT to LLMs: Understanding Chinese Classifier Prediction in Language Models</h3>
+                <p class="pub-authors">First Author · Advised by Prof. Emmanuele Chersoni · PolyU</p>
+                <p class="pub-abstract">Evaluated Chinese classifier generation across models using prompt engineering and LoRA fine-tuning. Found BERT's bidirectional attention (62.31%) outperforms larger models in this task, revealing insights about attention mechanisms in grammatical prediction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="writing" class="section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>Projects</h2>
+        </div>
+
+        <div class="project-item">
+            <div class="project-tags">
+                <span>Benchmark</span>
+                <span>Multilingual</span>
+                <span>CoT</span>
+            </div>
+            <h3>IntEx-Bench: A Unified Evaluation Benchmark</h3>
+            <p>Designed a 7,000+ entry multilingual benchmark with dual evaluation framework — zero-shot CoT for explicit reasoning and contextual embedding extraction for implicit representation. Developed Semantic Feature-CoT framework to enhance compound word interpretability.</p>
+            <span class="project-role">Project Leader & First Author · Oct 2025 – Feb 2026</span>
+        </div>
+
+        <div class="project-item">
+            <div class="project-tags">
+                <span>EEG-fMRI</span>
+                <span>Cognitive Science</span>
+                <span>LLM</span>
+            </div>
+            <h3>Cognitive Processing in Healthy Aging — An EEG-fMRI Study</h3>
+            <p>Extracted Surprisal and Entropy features from LLMs and aligned them with neuroimaging data to explore how computational linguistic indicators predict brain processing mechanisms across the lifespan.</p>
+            <span class="project-role">Research Assistant · PolyU & HKU · Mar 2026 – Present</span>
+        </div>
+
+        <div class="project-item">
+            <div class="project-tags">
+                <span>Multimodal</span>
+                <span>Healthcare</span>
+                <span>NLP+CV</span>
+            </div>
+            <h3>Intelligent Health Monitoring System (Multimodal LLMs)</h3>
+            <p>Designed an elder care system integrating NLP, speech recognition, and computer vision. Advanced to Hong Kong Regional Finals of the China International College Students' Innovation Competition 2024.</p>
+            <span class="project-role">Project Member · CUHK · May 2024 – Sep 2024</span>
+        </div>
+
+        <div class="project-item">
+            <div class="project-tags">
+                <span>Phonetics</span>
+                <span>Speech</span>
+                <span>Python</span>
+            </div>
+            <h3>Cantonese Spontaneous Speech Corpus & Phonetics Research</h3>
+            <p>Analyzed 40K+ interrogative sentences from Common Voice and OpenSLR. Built automated pipeline for batch audio analysis using Python, Praat, and Montreal Forced Aligner. Applied Linear Mixed-Effects Models for statistical analysis.</p>
+            <span class="project-role">Project Leader · PolyU & HIT (Shenzhen) · May 2025 – Dec 2025</span>
+        </div>
+
+        <div class="project-item">
+            <div class="project-tags">
+                <span>Syntactic Analysis</span>
+                <span>Probing</span>
+                <span>Psycholinguistics</span>
+            </div>
+            <h3>Mechanisms of LLMs in Processing Ambiguous Sentences</h3>
+            <p>Constructed a 1,000+ Garden-path sentence dataset. Used Dependency-Trained Probes for deep syntactic analysis and minicons library for token-level log probability evaluation.</p>
+            <span class="project-role">Research Assistant · PolyU · Aug 2025 – Dec 2025</span>
+        </div>
+    </section>
+
+    <!-- Extracurricular -->
+    <section class="section section-compact">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2>Beyond Research</h2>
+        </div>
+        <div class="activities">
+            <div class="activity-item">
+                <span class="activity-emoji">🎵</span>
+                <div>
+                    <strong>First Flute</strong> — PolyU Orchestra
+                    <span class="activity-detail">Tsinghua-PolyU joint concert soloist · HKGNA 2024 Music Festival</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <span class="activity-emoji">🌏</span>
+                <div>
+                    <strong>Volunteer Teacher</strong> — Cambodia
+                    <span class="activity-detail">Teaching AI tools & coding with Scratch and Google Teachable Machine</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <span class="activity-emoji">📋</span>
+                <div>
+                    <strong>Cultural Secretary</strong> — Hall Student Association
+                    <span class="activity-detail">Organized talent show, energy-saving day, and sports day</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-contact">
+        <div class="contact-inner">
+            <h2>Get in touch</h2>
+            <p>If you're working on anything at the intersection of language and AI, I'd love to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:22101842d@connect.polyu.hk" class="contact-link">Email</a>
+                <span class="contact-divider">·</span>
+                <a href="#" class="contact-link">Google Scholar</a>
+                <span class="contact-divider">·</span>
+                <a href="#" class="contact-link">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Zhang Ziqi</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
