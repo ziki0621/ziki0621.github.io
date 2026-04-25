@@ -182,7 +182,7 @@ nav {
 
 .section-header {
     display: flex; align-items: baseline; gap: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 7px;
 }
 .section-number {
     font-size: 0.8rem; font-weight: 500; color: var(--text-light);
