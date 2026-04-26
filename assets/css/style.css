@@ -146,8 +146,8 @@ nav {
     transition: transform 2.5s ease, opacity 2.5s ease;
 }
 @keyframes spotlightBreathe {
-    0%, 100% { filter: brightness(0.6); }
-    50% { filter: brightness(1); }
+    0%, 100% { filter: brightness(0.3); }
+    50% { filter: brightness(1.2); }
 }
 .spotlight {
     animation: spotlightBreathe 5s ease-in-out infinite;

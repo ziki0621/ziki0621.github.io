@@ -41,7 +41,7 @@ if (spotlightContainer) {
             beam.style.transform = `rotate(${angles[i]}deg)`;
             beam.style.opacity = 0.4 + Math.random() * 0.6;
         });
-        setTimeout(driftSpotlights, 2500 + Math.random() * 1500);
+        setTimeout(driftSpotlights, 1500 + Math.random() * 1500);
     }
     driftSpotlights();
 }
