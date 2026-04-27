@@ -4,33 +4,31 @@
 
 ---
 
-## 一、当前网站全部内容
+## 一、布局结构
 
-### 🔝 导航栏
+网站采用 **左栏 + 右栏** 两栏布局：
 
-| 项目 | 值 |
-|------|----|
-| Logo 文字 | `Ziki` |
-| 链接1 | Education → `#work` |
-| 链接2 | Publications → `#research` |
-| 链接3 | Projects → `#writing` |
-| 链接4 | Get in touch → `#contact`（胶囊按钮样式） |
-
-> 要修改：改下表后告诉我
+- **左侧栏（Sidebar）**：320px 宽，暗色渐变背景（#1a1a1a → #2d2d2d → #1a1a1a），sticky 定位固定在左侧。包含头像、姓名、简介、元数据、联系链接、照片、射光灯动画特效。
+- **右侧（Content）**：max-width 640px，浅色背景（#faf9f6）。包含所有内容区块：Education、Publications、Projects、Beyond Research、Footer。
 
 ---
 
-### 🏠 Hero 区域
+## 二、网站全部内容
+
+### 🧑‍💼 左侧栏（Sidebar）
 
 | 字段 | 当前内容 |
 |------|---------|
-| 标签 | `Zhang Ziqi` |
-| 大标题第一行 | `Linguistics meets` |
-| 大标题第二行（斜体） | `artificial intelligence.` |
-| 简介文字 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
+| 头像 | `images/photo-avatar.jpg`（圆形裁剪，160×160） |
+| 姓名 | `Zhang Ziqi` |
+| 标语 | `Linguistics meets artificial intelligence.`（artificial intelligence 斜体） |
+| 简介 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
 | Currently | `B.A. Linguistics & AI · PolyU` |
 | Research | `LLM Interpretability · Cognitive Science` |
-| 头像照片 | `images/photo-avatar.jpg`（圆形裁剪，200×200） |
+| Email | `zhangziqi.bram@gmail.com` |
+| Google Scholar | `https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra` |
+| GitHub | `https://github.com/ziki0621` |
+| 照片 | `images/photo-profile.jpg`（120×160） |
 
 ---
 
@@ -42,7 +40,6 @@
 | 学校 | `The Hong Kong Polytechnic University` |
 | 专业 | `B.A. Linguistics & Translation · AI & Data Analytics (Secondary Major)` |
 | 课程 | `Coursework: Machine Learning, AI, Data Structures, NLP` |
-| 照片 | `images/photo-profile.jpg`（靠右显示，180×240） |
 
 ---
 
@@ -127,18 +124,6 @@
 
 ---
 
-### 📬 Contact
-
-| 字段 | 当前内容 |
-|------|---------|
-| 标题 | `Get in touch` |
-| 描述 | `If you're working on anything at the intersection of language and AI, I'd love to hear from you.` |
-| Email | `zhangziqi.bram@gmail.com` |
-| Google Scholar | `https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra` |
-| GitHub | `https://github.com/ziki0621` |
-
----
-
 ### © Footer
 
 | 字段 | 当前内容 |
@@ -150,25 +135,25 @@
 
 ### 特效
 
-- **Hero 射光灯**：9 道光束，由 JS 动态生成，高度 300-550px 随机，从底部向上发散。每 2.5-4s 随机漂移角度和透明度，持续变化
+- **左侧栏射光灯**：7 道光束，由 JS 动态生成，高度 300-500px 随机，从底部向上发散。每 1.5-3s 随机漂移角度和透明度，持续变化
 
 ---
 
-## 二、设计规范
+## 三、设计规范
 
 ### 颜色
 
 | 用途 | 色值 |
 |------|------|
 | 页面背景 | `#faf9f6` |
-| Hero 背景 | 渐变 `#1a1a1a` → `#2d2d2d` → `#1a1a1a` |
-| Contact/Footer 背景 | `#1a1a1a` |
+| 左侧栏背景 | 渐变 `#1a1a1a` → `#2d2d2d` → `#1a1a1a` |
+| Contact/Footer 背景 | `#1a1a1a`（已废弃，现在联系链接在左侧栏） |
 | 正文颜色 | `#1a1a1a` |
 | 次要文字 | `#6b6b6b` |
 | 浅色文字 | `#a0a0a0` |
 | 分隔线 | `#e8e7e4` |
-| Hero/Contact 文字 | `#ffffff` |
-| Hero 次要文字 | `rgba(255,255,255,0.55)` |
+| 左侧栏文字 | `#ffffff` |
+| 左侧栏次要文字 | `rgba(255,255,255,X)`（不同层级不同透明度） |
 
 ### 字体
 
@@ -179,27 +164,28 @@
 
 ### 间距
 
-- 页面最大宽度：`720px`（居中）
+- 左侧栏宽度：`320px`（固定）
+- 右侧内容最大宽度：`640px`
 - 区块上下间距：`36px`
 - 区块标题距下方内容：`7px`
 
 ---
 
-## 三、文件结构
+## 四、文件结构
 
 ```
 ziqi-website/
-├── index.html        # 主页面（所有内容）
+├── index.html        # 主页面（两栏布局）
 ├── assets/
 │   ├── css/
 │   │   └── style.css # 样式
 │   └── js/
-│       └── main.js   # 交互效果
+│       └── main.js   # 射光灯 + 滚动动画
 ├── images/           # 🖼️ 放图片
-│   ├── photo-avatar.jpg    # Hero 头像（圆形裁剪）
-│   ├── photo-profile.jpg   # Education 区照片
+│   ├── photo-avatar.jpg    # 左侧栏头像（圆形裁剪）
+│   ├── photo-profile.jpg   # 左侧栏下方照片
 │   └── photo.jpg           # 原始照片
-├── files/            # 📎 放 PDF 等文件（你放这里）
+├── files/            # 📎 放 PDF 等文件
 ├── DESIGN.md         # ← 就是这个文件
 ├── render.yaml       # Render 部署配置
 ├── .gitignore
@@ -208,26 +194,26 @@ ziqi-website/
 
 ---
 
-## 四、如何修改
+## 五、如何修改
 
 ### 方式 A：你改这个文档，我来同步（推荐）
 
-1. 编辑上面「当前网站全部内容」部分的表格
+1. 编辑上面的表格
 2. 告诉我：**"按设计文档更新网站"**
-3. 我自动同步到 `index.html`，然后 `git push`
+3. 我自动同步到 `index.html` 和 `style.css`，然后 `git push`
 
 ### 方式 B：直接跟我说
 
 直接说需求，比如：
 - "把简介改成 xxx"
 - "加一篇新论文，标题是 xxx，会议是 xxx"
-- "在英雄区加一张图片，路径是 images/myphoto.jpg"
+- "在左侧栏加一行信息"
 - "把邮箱改成 xxx@xxx.com"
 
 ### 添加图片
 
 1. 把图片文件放到 `images/` 文件夹
-2. 告诉我"在 xxx 位置放图片，文件名是 xxx.jpg"
+2. 告诉我"在左侧栏/哪里的位置放图片，文件名是 xxx.jpg"
 
 ### 添加文件（简历等）
 
@@ -236,7 +222,7 @@ ziqi-website/
 
 ---
 
-## 五、部署
+## 六、部署
 
 ```bash
 git add .
