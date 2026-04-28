@@ -8,8 +8,9 @@
 
 网站采用 **左栏 + 右栏** 两栏布局：
 
-- **左侧栏（Sidebar）**：320px 宽，暗色渐变背景（#1a1a1a → #2d2d2d → #1a1a1a），sticky 定位固定在左侧。包含头像、姓名、简介、元数据、联系链接、照片、射光灯动画特效。
-- **右侧（Content）**：max-width 640px，浅色背景（#faf9f6）。包含所有内容区块：Education、Publications、Projects、Beyond Research、Footer。
+- **左侧栏（Sidebar）**：320px 宽，暗色渐变背景（#1a1a1a → #2d2d2d → #1a1a1a），sticky 定位固定在左侧。包含头像、姓名、标语、元数据、联系链接、射光灯动画特效。
+- **右侧（Content）**：max-width 640px，浅色背景（#faf9f6）。包含个人简介、所有内容区块：Education、Publications、Projects、Beyond Research、Footer。
+- **整体布局**：max-width 1024px，居中显示，左右留均等空白。
 
 ---
 
@@ -22,13 +23,19 @@
 | 头像 | `images/photo-avatar.jpg`（圆形裁剪，160×160） |
 | 姓名 | `Zhang Ziqi` |
 | 标语 | `Linguistics meets artificial intelligence.`（artificial intelligence 斜体） |
-| 简介 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
 | Currently | `B.A. Linguistics & AI · PolyU` |
 | Research | `LLM Interpretability · Cognitive Science` |
 | Email | `zhangziqi.bram@gmail.com` |
 | Google Scholar | `https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra` |
 | GitHub | `https://github.com/ziki0621` |
-| 照片 | `images/photo-profile.jpg`（120×160） |
+
+---
+
+### 📝 个人简介（右侧内容区顶部）
+
+| 字段 | 当前内容 |
+|------|---------|
+| 简介 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
 
 ---
 

@@ -36,6 +36,8 @@ body {
 .layout {
     display: flex;
     min-height: 100vh;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 /* ============================
@@ -97,12 +99,11 @@ body {
     color: rgba(255,255,255,0.55);
 }
 
-.sidebar-bio {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.42);
-    line-height: 1.6;
-    margin-bottom: 22px;
-    max-width: 260px;
+.content-bio {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 560px;
 }
 
 .sidebar-meta {
@@ -141,15 +142,6 @@ body {
 }
 .sidebar-links a:hover { color: #fff; }
 .sidebar-links span { color: rgba(255,255,255,0.2); }
-
-.sidebar-profile {
-    width: 120px;
-    height: 160px;
-    border-radius: 6px;
-    object-fit: cover;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    flex-shrink: 0;
-}
 
 /* Sidebar spotlights */
 .sidebar-spotlights {
@@ -340,7 +332,6 @@ footer {
         overflow-y: visible;
     }
     .sidebar-avatar { width: 120px; height: 120px; }
-    .sidebar-profile { width: 100px; height: 133px; }
     .sidebar-spotlights { height: 100%; }
     .spotlight { width: 140px; }
 
