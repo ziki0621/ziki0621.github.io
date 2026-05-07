@@ -31,10 +31,11 @@
 
 ---
 
-### 📝 个人简介（右侧内容区顶部）
+### 📝 About Me（00 — 右侧内容区顶部）
 
 | 字段 | 当前内容 |
 |------|---------|
+| 标题 | `About Me` |
 | 简介 | `Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.` |
 
 ---
