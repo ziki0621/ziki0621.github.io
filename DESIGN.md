@@ -1,26 +1,58 @@
-# ziki0621.github.io — 个人网站设计文档
+# ziki0621.github.io — 个人网站设计文档 v2.0
 
 > **使用方式：** 想改网站内容时，直接编辑这个文件里的对应信息，然后告诉我"按设计文档更新网站"。我会读取这个文件，同步修改 `index.html` 和 `style.css`，再推送上线。
 
 ---
 
-## 一、布局结构
+## 一、设计系统：羊皮纸 × 线框终端
 
-网站采用 **左栏 + 右栏** 两栏布局：
+网站采用 **羊皮纸纹理 + 复古线框终端** 美学，灵感来自旧纸张质感与CRT终端界面。
 
-- **左侧栏（Sidebar）**：320px 宽，暗色渐变背景（#1a1a1a → #2d2d2d → #1a1a1a），sticky 定位固定在左侧。包含头像、姓名、标语、元数据、联系链接、射光灯动画特效。
-- **右侧（Content）**：max-width 640px，浅色背景（#faf9f6）。包含个人简介、所有内容区块：Education、Publications、Projects、Beyond Research、Footer。
-- **整体布局**：max-width 1024px，居中显示，左右留均等空白。
+### 配色
+
+| 用途 | 色值 |
+|------|------|
+| 页面底色（羊皮纸） | `#F3EAD5` |
+| 侧边栏底色（加深羊皮纸） | `#E3D4BB` |
+| 更深的羊皮纸 | `#D5C4A6` |
+| 正文/边框 | `#4A3B2C` |
+| 次要文字 | `rgba(74, 59, 44, 0.70)` |
+| 浅色文字 | `rgba(74, 59, 44, 0.50)` |
+
+### 字体
+
+| 用途 | 字体 |
+|------|------|
+| 标题 (section header) | `Noto Serif SC` (宋体) |
+| 正文 | `Times New Roman`, Georgia, serif |
+| 系统标签/日期/等宽 | `SF Mono`, `Consolas`, monospace |
+
+### 核心设计模式
+
+1. **羊皮纸纹理背景** — 4 层叠加：SVG 斑驳噪声 + 纤维颗粒 + 网纹纸编织线 + 暗角阴影
+2. **Wireframe Box** — 双层边框卡片：外层 1.5px + 内层 0.5px，附带 `2px 2px 0` 偏移阴影
+3. **区块标题** — `◇` 菱形 + 横线 + 文字 + 横线 + `◇` 菱形
+4. **等宽系统标签** — 日期、代码、元数据使用 `font-mono` + 宽字间距
 
 ---
 
-## 二、网站全部内容
+## 二、布局结构
+
+网站采用 **左栏 + 右栏** 两栏布局：
+
+- **左侧栏（Sidebar）**：300px 宽，羊皮纸加深色（`#E3D4BB`），sticky 定位，右侧有 1.5px 边框 + 阴影。包含双层边框圆形头像、姓名、标语、菱形分隔线、系统标签、链接、在线状态灯、版本号。
+- **右侧（Content）**：max-width 660px。每个区块包裹在 wireframe-box（双层边框卡片）中。
+- **整体布局**：max-width 1040px，居中显示。
+
+---
+
+## 三、网站全部内容
 
 ### 🧑‍💼 左侧栏（Sidebar）
 
 | 字段 | 当前内容 |
 |------|---------|
-| 头像 | `images/photo-avatar.jpg`（圆形裁剪，160×160） |
+| 头像 | `images/photo-avatar.jpg`（双层线框圆形裁剪） |
 | 姓名 | `Zhang Ziqi` |
 | 标语 | `Linguistics meets artificial intelligence.`（artificial intelligence 斜体） |
 | Currently | `B.A. Linguistics & AI · PolyU` |
@@ -28,6 +60,8 @@
 | Email | `zhangziqi.bram@gmail.com` |
 | Google Scholar | `https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra` |
 | GitHub | `https://github.com/ziki0621` |
+| 状态灯 | `ONLINE` (带呼吸动画的LED指示灯) |
+| 版本号 | `SYS_VER — 2.0.0` |
 
 ---
 
@@ -143,39 +177,10 @@
 
 ### 特效
 
-- **左侧栏射光灯**：7 道光束，由 JS 动态生成，高度 300-500px 随机，从底部向上发散。每 1.5-3s 随机漂移角度和透明度，持续变化
-
----
-
-## 三、设计规范
-
-### 颜色
-
-| 用途 | 色值 |
-|------|------|
-| 页面背景 | `#faf9f6` |
-| 左侧栏背景 | 渐变 `#1a1a1a` → `#2d2d2d` → `#1a1a1a` |
-| Contact/Footer 背景 | `#1a1a1a`（已废弃，现在联系链接在左侧栏） |
-| 正文颜色 | `#1a1a1a` |
-| 次要文字 | `#6b6b6b` |
-| 浅色文字 | `#a0a0a0` |
-| 分隔线 | `#e8e7e4` |
-| 左侧栏文字 | `#ffffff` |
-| 左侧栏次要文字 | `rgba(255,255,255,X)`（不同层级不同透明度） |
-
-### 字体
-
-| 用途 | 字体 |
-|------|------|
-| 全部文字 | `Times New Roman` |
-| 斜体强调 | `Times New Roman italic` |
-
-### 间距
-
-- 左侧栏宽度：`320px`（固定）
-- 右侧内容最大宽度：`640px`
-- 区块上下间距：`36px`
-- 区块标题距下方内容：`7px`
+- **羊皮纸背景**：SVG `feTurbulence` 生成斑驳噪点/纤维颗粒纹理，叠加网纹纸编织线
+- **暗角**：双层 `inset box-shadow` 模拟纸页边缘氧化
+- **侧边栏状态灯**：LED 呼吸动画
+- **滚动淡入动画**：教育、论文、项目、活动项目在滚动进入视口时淡入
 
 ---
 
@@ -183,15 +188,15 @@
 
 ```
 ziqi-website/
-├── index.html        # 主页面（两栏布局）
+├── index.html        # 主页面（两栏布局，wireframe box卡片）
 ├── assets/
 │   ├── css/
-│   │   └── style.css # 样式
+│   │   └── style.css # 样式（羊皮纸纹理 + wireframe设计系统）
 │   └── js/
-│       └── main.js   # 射光灯 + 滚动动画
+│       └── main.js   # 滚动淡入动画
 ├── images/           # 🖼️ 放图片
-│   ├── photo-avatar.jpg    # 左侧栏头像（圆形裁剪）
-│   ├── photo-profile.jpg   # 左侧栏下方照片
+│   ├── photo-avatar.jpg    # 左侧栏头像
+│   ├── photo-profile.jpg   # 备用照片
 │   └── photo.jpg           # 原始照片
 ├── files/            # 📎 放 PDF 等文件
 ├── DESIGN.md         # ← 就是这个文件
@@ -217,16 +222,6 @@ ziqi-website/
 - "加一篇新论文，标题是 xxx，会议是 xxx"
 - "在左侧栏加一行信息"
 - "把邮箱改成 xxx@xxx.com"
-
-### 添加图片
-
-1. 把图片文件放到 `images/` 文件夹
-2. 告诉我"在左侧栏/哪里的位置放图片，文件名是 xxx.jpg"
-
-### 添加文件（简历等）
-
-1. 把 PDF 等文件放到 `files/` 文件夹
-2. 告诉我"在 xxx 位置加文件链接"
 
 ---
 

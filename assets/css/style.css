@@ -1,48 +1,213 @@
-/* ============================
-   Zhang Ziqi — Left Sidebar Design
-   ============================ */
+/* ==============================================
+   Zhang Ziqi — Parchment & Wireframe Design
+   Design System: 羊皮紙 + 線框終端美學
+   ============================================== */
 
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
 :root {
-    --bg: #faf9f6;
-    --text: #1a1a1a;
-    --text-secondary: #6b6b6b;
-    --text-light: #a0a0a0;
-    --accent: #2b2b2b;
-    --accent-hover: #000;
-    --line: #e8e7e4;
-    --sidebar-width: 320px;
-    --content-max-width: 640px;
-    --font-sans: 'Times New Roman', Times, Georgia, serif;
-    --font-serif: 'Times New Roman', Times, Georgia, serif;
+    --parchment: #F3EAD5;
+    --parchment-shaded: #E3D4BB;
+    --parchment-deeper: #D5C4A6;
+    --text-primary: #4A3B2C;
+    --text-secondary: rgba(74, 59, 44, 0.70);
+    --text-light: rgba(74, 59, 44, 0.50);
+    --text-faint: rgba(74, 59, 44, 0.35);
+    --border: #4A3B2C;
+    --border-light: rgba(74, 59, 44, 0.25);
+    --shadow: rgba(74, 59, 44, 0.15);
+    --sidebar-width: 300px;
+    --content-max-width: 660px;
+    --max-layout-width: 1040px;
+    --font-serif-cn: 'Noto Serif SC', 'Songti SC', 'SimSun', 'Times New Roman', serif;
+    --font-serif: 'Times New Roman', Georgia, serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
 }
 
-/* Reset */
+/* ---------- Reset ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-    font-family: var(--font-sans);
-    color: var(--text);
-    background: var(--bg);
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    background: var(--parchment);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
+    position: relative;
+    overflow-x: hidden;
+}
+::selection {
+    background: var(--text-primary);
+    color: var(--parchment);
 }
 
-::selection { background: #1a1a1a; color: #fff; }
+/* ==============================================
+   Parchment Texture (full-page, fixed)
+   ============================================== */
+.parchment-texture {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: var(--parchment);
+}
+/* Layer 1 — Fractal stains / cloud unevenness */
+.parchment-stains {
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    mix-blend-mode: color-burn;
+    width: 100%;
+    height: 100%;
+}
+/* Layer 2 — Fine fiber / grain noise */
+.parchment-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+}
+/* Layer 3 — Laid paper weave (vertical + horizontal) */
+.parchment-weave-v {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        var(--text-primary) 2px,
+        var(--text-primary) 4px
+    );
+}
+.parchment-weave-h {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 16px,
+        var(--text-primary) 16px,
+        var(--text-primary) 18px
+    );
+}
+/* Layer 4 — Aged edge oxidation & vignette */
+.parchment-vignette-outer {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 150px rgba(74, 59, 44, 0.30);
+}
+.parchment-vignette-inner {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 40px rgba(74, 59, 44, 0.10);
+}
 
-/* ============================
+/* ==============================================
+   Wireframe Box (core card component)
+   ============================================== */
+.wireframe-box {
+    position: relative;
+    border: 1.5px solid var(--border);
+    padding: 2.5px;
+    box-shadow: 2px 2px 0px var(--shadow);
+    background: var(--parchment);
+}
+.wireframe-box > .wireframe-inner {
+    border: 0.5px solid var(--border);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--parchment);
+}
+.wireframe-box.shaded {
+    background: var(--parchment-shaded);
+}
+.wireframe-box.shaded > .wireframe-inner {
+    background: var(--parchment-shaded);
+}
+
+/* ---------- Section Title with Diamonds ---------- */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+    opacity: 0.85;
+}
+.section-header .diamond {
+    font-size: 6px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.section-header .rule {
+    height: 1px;
+    background: var(--border);
+    flex: 1;
+    opacity: 0.5;
+}
+.section-header h2 {
+    font-family: var(--font-serif-cn);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: none;
+    white-space: nowrap;
+    padding: 0 2px;
+}
+.section-number {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.15em;
+    margin-right: 2px;
+}
+
+/* ---------- Diamond Divider ---------- */
+.diamond-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 4px 0;
+    color: var(--text-faint);
+}
+.diamond-divider .diamond {
+    font-size: 5px;
+    line-height: 1;
+}
+.diamond-divider .rule {
+    height: 0.5px;
+    background: var(--border);
+    flex: 1;
+    max-width: 60px;
+    opacity: 0.3;
+}
+
+/* ==============================================
    Layout
-   ============================ */
+   ============================================== */
 .layout {
     display: flex;
     min-height: 100vh;
-    max-width: 1024px;
+    max-width: var(--max-layout-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
-/* ============================
-   Sidebar
-   ============================ */
+/* ==============================================
+   Sidebar — shaded parchment panel
+   ============================================== */
 .sidebar {
     width: var(--sidebar-width);
     flex-shrink: 0;
@@ -50,13 +215,14 @@ body {
     top: 0;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(160deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-    color: #fff;
+    background: var(--parchment-shaded);
+    border-right: 1.5px solid var(--border);
+    box-shadow: 2px 0px 0px var(--shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
-
 .sidebar-inner {
     position: relative;
     z-index: 2;
@@ -64,259 +230,395 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 48px 28px 32px;
+    padding: 48px 24px 28px;
     overflow-y: auto;
     flex: 1;
     width: 100%;
 }
 
-.sidebar-avatar {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255,255,255,0.15);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.3);
-    margin-bottom: 20px;
+/* Avatar — wireframe framed */
+.sidebar-avatar-wrap {
+    position: relative;
+    margin-bottom: 22px;
     flex-shrink: 0;
 }
+.sidebar-avatar-outer {
+    width: 150px;
+    height: 150px;
+    border: 1.5px solid var(--border);
+    padding: 3px;
+    box-shadow: 2px 2px 0px var(--shadow);
+    background: var(--parchment);
+    border-radius: 50%;
+}
+.sidebar-avatar-inner {
+    border: 0.5px solid var(--border);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--parchment-shaded);
+}
+.sidebar-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
+/* Name & Tagline */
 .sidebar-name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
+    font-family: var(--font-serif-cn);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    color: var(--text-primary);
 }
-
 .sidebar-tagline {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.35;
-    margin-bottom: 20px;
-}
-.sidebar-tagline em {
-    font-style: italic;
-    color: rgba(255,255,255,0.55);
-}
-
-.content-bio {
-    font-size: 0.95rem;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    line-height: 1.7;
-    max-width: 560px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
+/* Meta fields (monospace system labels) */
 .sidebar-meta {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 24px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 6px;
     width: 100%;
+    padding-top: 14px;
 }
 .sidebar-meta p {
+    font-family: var(--font-serif);
     font-size: 0.72rem;
-    color: rgba(255,255,255,0.5);
+    color: var(--text-secondary);
+    line-height: 1.3;
 }
-.sidebar-meta p span {
+.sidebar-meta p .label {
     display: block;
-    font-size: 0.62rem;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
     margin-bottom: 2px;
 }
 
+/* Links */
 .sidebar-links {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 24px;
+    font-family: var(--font-serif);
     font-size: 0.78rem;
+    margin-bottom: 4px;
 }
 .sidebar-links a {
-    color: rgba(255,255,255,0.7);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s;
 }
-.sidebar-links a:hover { color: #fff; }
-.sidebar-links span { color: rgba(255,255,255,0.2); }
-
-/* Sidebar spotlights */
-.sidebar-spotlights {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 1;
+.sidebar-links a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.sidebar-links .dot {
+    color: var(--text-faint);
+    font-size: 0.6rem;
 }
 
-.spotlight {
-    position: absolute; bottom: -100px;
-    width: 200px;
-    background: linear-gradient(to top, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
-    clip-path: polygon(15% 0%, 85% 0%, 60% 100%, 40% 100%);
-    transform-origin: bottom center;
-    transition: transform 2.5s ease, opacity 2.5s ease;
-    animation: spotlightBreathe 5s ease-in-out infinite;
+/* Status indicator */
+.sidebar-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    margin-top: 10px;
+    opacity: 0.7;
 }
-@keyframes spotlightBreathe {
-    0%, 100% { filter: brightness(0.3); }
-    50% { filter: brightness(1.2); }
+.sidebar-status .led {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-primary);
+    animation: ledPulse 2s ease-in-out infinite;
+}
+.sidebar-status span {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+@keyframes ledPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
 }
 
-/* ============================
-   Content
-   ============================ */
+/* Bottom version label */
+.sidebar-version {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    margin-top: 4px;
+}
+
+/* ==============================================
+   Content Area
+   ============================================== */
 .content {
     flex: 1;
     max-width: var(--content-max-width);
-    padding: 48px 0;
+    padding: 36px 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    z-index: 1;
 }
 
-/* ============================
-   Sections
-   ============================ */
-.section {
-    padding: 36px 40px;
+/* ==============================================
+   Section Cards (wireframe-box wrappers)
+   ============================================== */
+.section-card {
+    margin: 0 32px;
 }
-.section-compact { padding: 24px 40px 36px; }
-
-.section-header {
-    display: flex; align-items: baseline; gap: 16px;
-    margin-bottom: 7px;
-}
-.section-number {
-    font-size: 0.8rem; font-weight: 500; color: var(--text-light);
-    font-variant-numeric: tabular-nums;
-}
-.section-header h2 {
-    font-size: 1.8rem; font-weight: 600; letter-spacing: -0.5px;
+.section-card .card-pad {
+    padding: 24px 28px 28px;
 }
 
-/* ============================
+/* Bio text */
+.content-bio {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.72;
+}
+
+/* ==============================================
    Education
-   ============================ */
-.work-item {
-    display: flex; gap: 28px; padding: 24px 0;
-    border-top: 1px solid var(--line);
+   ============================================== */
+.edu-item {
+    display: flex;
+    gap: 24px;
     align-items: flex-start;
 }
-.work-year {
-    font-size: 0.85rem; color: var(--text-secondary);
-    min-width: 100px; font-weight: 500; font-variant-numeric: tabular-nums;
+.edu-year {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    min-width: 105px;
+    padding-top: 1px;
 }
-.work-detail h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
-.work-sub { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2px; }
-.work-extra { font-size: 0.82rem; color: var(--text-light); }
-
-@media (max-width: 600px) {
-    .work-item { flex-direction: column; gap: 8px; }
-    .work-year { min-width: auto; }
+.edu-detail h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    letter-spacing: -0.2px;
+}
+.edu-sub {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+.edu-extra {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-/* ============================
+/* ==============================================
    Publications
-   ============================ */
+   ============================================== */
 .pub-item {
-    display: flex; gap: 24px; padding: 26px 0;
-    border-top: 1px solid var(--line);
+    padding: 18px 0;
+    border-bottom: 0.5px solid var(--border-light);
 }
-.pub-item:last-of-type { border-bottom: 1px solid var(--line); }
-
+.pub-item:first-of-type {
+    padding-top: 0;
+}
+.pub-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 .pub-venue {
-    font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 1.5px; color: var(--text-light);
-    min-width: 140px; padding-top: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 4px;
 }
 .pub-content h3 {
-    font-size: 1.05rem; font-weight: 600; margin-bottom: 4px;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3px;
     line-height: 1.4;
 }
 .pub-content h3 a {
-    color: var(--text); text-decoration: none;
+    color: var(--text-primary);
+    text-decoration: none;
     transition: color 0.2s;
 }
-.pub-content h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
-.pub-authors { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 10px; font-style: italic; }
-.pub-authors strong { color: var(--text); font-weight: 600; font-style: italic; }
-
-@media (max-width: 600px) {
-    .pub-item { flex-direction: column; gap: 8px; }
-    .pub-venue { min-width: auto; }
+.pub-content h3 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.pub-authors {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+.pub-authors strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-style: italic;
 }
 
-/* ============================
+/* ==============================================
    Projects
-   ============================ */
+   ============================================== */
 .project-item {
-    padding: 26px 0; border-top: 1px solid var(--line);
+    padding: 20px 0;
+    border-bottom: 0.5px solid var(--border-light);
 }
-.project-item:last-of-type { padding-bottom: 0; }
-
-.project-tags { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.project-item:first-of-type {
+    padding-top: 0;
+}
+.project-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.project-tags {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
 .project-tags span {
-    font-size: 0.7rem; font-weight: 500; text-transform: uppercase;
-    letter-spacing: 0.8px; color: var(--text-light);
-    padding: 2px 10px; border: 1px solid var(--line); border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    padding: 2px 9px;
+    border: 1px solid var(--border);
+    background: var(--parchment);
 }
 .project-item h3 {
-    font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
     letter-spacing: -0.3px;
 }
 .project-item p {
-    font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65;
-    max-width: 600px;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.62;
 }
 .project-role {
-    display: inline-block; font-size: 0.78rem; color: var(--text-light);
-    margin-top: 12px; font-weight: 500;
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    margin-top: 10px;
 }
 
-/* ============================
-   Activities
-   ============================ */
-.activities { display: flex; flex-direction: column; gap: 0; }
+/* ==============================================
+   Activities (Beyond Research)
+   ============================================== */
 .activity-item {
-    display: flex; gap: 16px; align-items: flex-start;
-    padding: 16px 0; border-top: 1px solid var(--line);
-    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 0.5px solid var(--border-light);
+    font-family: var(--font-serif);
+    font-size: 0.87rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
-.activity-item strong { color: var(--text); font-weight: 600; }
-.activity-emoji { font-size: 1.2rem; margin-top: 2px; }
+.activity-item:first-of-type {
+    padding-top: 0;
+}
+.activity-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.activity-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.activity-emoji {
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
 .activity-detail {
-    display: block; font-size: 0.82rem; color: var(--text-light); margin-top: 2px;
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.06em;
+    margin-top: 2px;
 }
 
-/* ============================
+/* ==============================================
    Footer
-   ============================ */
+   ============================================== */
 footer {
-    text-align: center; padding: 20px 40px;
-    font-size: 0.78rem; color: var(--text-light);
-    border-top: 1px solid var(--line);
-    margin-top: 24px;
+    text-align: center;
+    padding: 14px 0;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
 }
 
-/* ============================
-   Animations
-   ============================ */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* ==============================================
+   Scroll Animations
+   ============================================== */
 .fade-in {
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
 }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-/* ============================
+/* ==============================================
    Responsive
-   ============================ */
+   ============================================== */
 @media (max-width: 768px) {
     .layout {
         flex-direction: column;
@@ -326,25 +628,59 @@ footer {
         position: relative;
         width: 100%;
         height: auto;
+        border-right: none;
+        border-bottom: 1.5px solid var(--border);
+        box-shadow: 0px 2px 0px var(--shadow);
     }
     .sidebar-inner {
-        padding: 40px 28px 36px;
+        padding: 36px 24px 28px;
         overflow-y: visible;
     }
-    .sidebar-avatar { width: 120px; height: 120px; }
-    .sidebar-spotlights { height: 100%; }
-    .spotlight { width: 140px; }
+    .sidebar-avatar-outer {
+        width: 110px;
+        height: 110px;
+    }
 
     .content {
         max-width: 100%;
-        padding: 16px 0;
+        padding: 24px 0 36px;
+        gap: 20px;
+    }
+    .section-card {
+        margin: 0 16px;
+    }
+    .section-card .card-pad {
+        padding: 20px 18px 22px;
+    }
+
+    .edu-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .edu-year {
+        min-width: auto;
     }
 }
 
 @media (max-width: 600px) {
-    .section { padding: 24px 20px; }
-    .section-compact { padding: 20px 20px 24px; }
-    .section-header h2 { font-size: 1.4rem; }
-    .section-header { margin-bottom: 7px; }
-    footer { padding: 16px 20px; }
+    .section-card {
+        margin: 0 8px;
+    }
+    .section-card .card-pad {
+        padding: 18px 14px 20px;
+    }
+    .section-header h2 {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+    }
+    .sidebar-avatar-outer {
+        width: 90px;
+        height: 90px;
+    }
+    .sidebar-name {
+        font-size: 1.05rem;
+    }
+    footer {
+        padding: 10px 0;
+    }
 }
