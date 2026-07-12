@@ -12,9 +12,9 @@
     --parchment-shaded: #E3D4BB;
     --parchment-deeper: #D5C4A6;
     --text-primary: #4A3B2C;
-    --text-secondary: rgba(74, 59, 44, 0.70);
-    --text-light: rgba(74, 59, 44, 0.50);
-    --text-faint: rgba(74, 59, 44, 0.35);
+    --text-secondary: rgba(74, 59, 44, 0.86);
+    --text-light: rgba(74, 59, 44, 0.68);
+    --text-faint: rgba(74, 59, 44, 0.52);
     --border: #4A3B2C;
     --border-light: rgba(74, 59, 44, 0.25);
     --shadow: rgba(74, 59, 44, 0.15);
@@ -158,7 +158,7 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    text-transform: none;
+    text-transform: uppercase;
     white-space: nowrap;
     padding: 0 2px;
 }
@@ -275,6 +275,7 @@ body {
     letter-spacing: 0.08em;
     margin-bottom: 6px;
     color: var(--text-primary);
+    text-transform: uppercase;
 }
 .sidebar-tagline {
     font-family: var(--font-serif);
@@ -317,7 +318,7 @@ body {
     align-items: center;
     gap: 10px;
     font-family: var(--font-serif);
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     margin-bottom: 4px;
 }
 .sidebar-links a {
@@ -342,7 +343,7 @@ body {
     gap: 7px;
     border: 1px solid var(--border);
     padding: 3px 10px;
-    margin-top: 10px;
+    margin-top: 42px;
     opacity: 0.7;
 }
 .sidebar-status .led {
@@ -373,6 +374,50 @@ body {
     color: var(--text-faint);
     margin-top: 4px;
 }
+
+/* Language switch and fixed section navigation */
+.language-toggle {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 20;
+    border: 1px solid var(--border);
+    background: rgba(243, 234, 213, 0.92);
+    color: var(--text-secondary);
+    padding: 6px 9px;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+.language-toggle span { opacity: 0.55; }
+.language-toggle .language-toggle-active { opacity: 1; color: var(--text-primary); }
+.language-toggle-separator { margin: 0 5px; }
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    margin-top: 28px;
+}
+.side-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.side-nav a span { opacity: 0.65; }
+.side-nav a b { font-weight: 700; }
+.side-nav a:hover { color: var(--text-primary); }
 
 /* ==============================================
    Content Area
@@ -405,6 +450,7 @@ body {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.72;
+    white-space: pre-line;
 }
 
 /* ==============================================
@@ -622,6 +668,8 @@ footer {
    Responsive
    ============================================== */
 @media (max-width: 768px) {
+    .language-toggle { top: 10px; right: 10px; }
+    .side-nav { display: none; }
     .layout {
         flex-direction: column;
         min-height: auto;

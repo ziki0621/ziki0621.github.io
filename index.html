@@ -8,6 +8,10 @@
 </head>
 <body>
 
+    <button class="language-toggle" type="button" aria-label="切换为中文" aria-pressed="false">
+        <span class="language-toggle-active">EN</span><span class="language-toggle-separator">/</span><span>中文</span>
+    </button>
+
     <!-- Hidden SVG filter definitions for parchment texture -->
     <svg width="0" height="0" style="position:absolute;overflow:hidden;" aria-hidden="true">
         <defs>
@@ -51,21 +55,7 @@
                     </div>
                 </div>
 
-                <h1 class="sidebar-name">Zhang Ziqi</h1>
-                <p class="sidebar-tagline">Linguistics meets <em>artificial intelligence.</em></p>
-
-                <!-- Diamond Divider -->
-                <div class="diamond-divider">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-
-                <!-- Meta -->
-                <div class="sidebar-meta">
-                    <p><span class="label">Currently</span> B.A. Linguistics &amp; AI &middot; PolyU</p>
-                    <p><span class="label">Research</span> LLM Interpretability &middot; Cognitive Science</p>
-                </div>
+                <h1 class="sidebar-name">ZHANG ZIQI</h1>
 
                 <!-- Diamond Divider -->
                 <div class="diamond-divider">
@@ -83,15 +73,22 @@
                     <a href="https://github.com/ziki0621" target="_blank">GitHub</a>
                 </div>
 
+                <nav class="side-nav" aria-label="Section navigation">
+                    <a href="#about"><span>00</span><b data-i18n="navAbout">About</b></a>
+                    <a href="#work"><span>01</span><b data-i18n="navEducation">Education</b></a>
+                    <a href="#research"><span>02</span><b data-i18n="navPublications">Publications</b></a>
+                    <a href="#writing"><span>03</span><b data-i18n="navProjects">Projects</b></a>
+                    <a href="#beyond"><span>04</span><b data-i18n="navBeyond">Beyond</b></a>
+                </nav>
+
                 <!-- Status -->
                 <div class="sidebar-status">
                     <span class="led"></span>
-                    <span>Online</span>
+                    <span data-i18n="online">Online</span>
                 </div>
 
                 <!-- Version -->
                 <div class="sidebar-version">SYS_VER &mdash; 2.0.0</div>
-
             </div>
         </aside>
 
@@ -99,18 +96,22 @@
         <main class="content">
 
             <!-- About Me -->
-            <div class="wireframe-box section-card">
+            <div id="about" class="wireframe-box section-card">
                 <div class="wireframe-inner card-pad">
                     <div class="section-header">
                         <span class="diamond">&#9671;</span>
                         <span class="rule"></span>
                         <span class="section-number">00</span>
-                        <h2>About Me</h2>
+                        <h2 data-i18n="aboutTitle">About Me</h2>
                         <span class="rule"></span>
                         <span class="diamond">&#9671;</span>
                     </div>
-                    <p class="content-bio">
-                        Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.
+                    <p class="content-bio" data-i18n="aboutBody">
+                        Nice to meet you! I'm a final-year student at The Hong Kong Polytechnic University (PolyU), double majoring in Linguistics and Artificial Intelligence. My research interests focus on how AI understands and applies human language.
+
+                        Outside of academics, I'm passionate about outdoor activities, writing, and playing music. I serve as first flute in the PolyU Orchestra and have performed at various music festivals and concerts.
+
+                        If we share similar interests, feel free to reach out—I would be glad to connect with you!
                     </p>
                 </div>
             </div>
@@ -122,16 +123,15 @@
                         <span class="diamond">&#9671;</span>
                         <span class="rule"></span>
                         <span class="section-number">01</span>
-                        <h2>Education</h2>
+                        <h2 data-i18n="educationTitle">Education</h2>
                         <span class="rule"></span>
                         <span class="diamond">&#9671;</span>
                     </div>
                     <div class="edu-item fade-in">
                         <div class="edu-year">2022 – 2026</div>
                         <div class="edu-detail">
-                            <h3>The Hong Kong Polytechnic University</h3>
-                            <p class="edu-sub">B.A. Linguistics &amp; Translation &middot; AI &amp; Data Analytics (Secondary Major)</p>
-                            <p class="edu-extra">Coursework: Machine Learning, AI, Data Structures, NLP</p>
+                            <h3 data-i18n="university">The Hong Kong Polytechnic University</h3>
+                            <p class="edu-sub" data-i18n="degree">B.A. Linguistics &amp; Translation &middot; AI &amp; Data Analytics (Secondary Major)</p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                         <span class="diamond">&#9671;</span>
                         <span class="rule"></span>
                         <span class="section-number">02</span>
-                        <h2>Publications</h2>
+                        <h2 data-i18n="publicationsTitle">Publications</h2>
                         <span class="rule"></span>
                         <span class="diamond">&#9671;</span>
                     </div>
@@ -172,7 +172,7 @@
                         <span class="diamond">&#9671;</span>
                         <span class="rule"></span>
                         <span class="section-number">03</span>
-                        <h2>Projects</h2>
+                        <h2 data-i18n="projectsTitle">Projects</h2>
                         <span class="rule"></span>
                         <span class="diamond">&#9671;</span>
                     </div>
@@ -220,13 +220,13 @@
             </div>
 
             <!-- Beyond Research -->
-            <div class="wireframe-box section-card">
+            <div id="beyond" class="wireframe-box section-card">
                 <div class="wireframe-inner card-pad">
                     <div class="section-header">
                         <span class="diamond">&#9671;</span>
                         <span class="rule"></span>
                         <span class="section-number">04</span>
-                        <h2>Beyond Research</h2>
+                        <h2 data-i18n="beyondTitle">Beyond Research</h2>
                         <span class="rule"></span>
                         <span class="diamond">&#9671;</span>
                     </div>
