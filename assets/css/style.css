@@ -1,7 +1,6 @@
 /* ==============================================
    Zhang Ziqi — Parchment & Wireframe Design
    Design System: 羊皮紙 + 線框終端美學
-   Single-column layout, profile printed on parchment
    ============================================== */
 
 /* ---------- Google Fonts ---------- */
@@ -19,7 +18,9 @@
     --border: #4A3B2C;
     --border-light: rgba(74, 59, 44, 0.25);
     --shadow: rgba(74, 59, 44, 0.15);
-    --content-max-width: 660px;
+    --sidebar-width: 300px;
+    --content-max-width: 720px;
+    --max-layout-width: 1040px;
     --font-serif-cn: 'Noto Serif SC', 'Songti SC', 'SimSun', 'Times New Roman', serif;
     --font-serif: 'Times New Roman', Georgia, serif;
     --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
@@ -53,6 +54,7 @@ body {
     z-index: 0;
     background: var(--parchment);
 }
+/* Layer 1 — Fractal stains / cloud unevenness */
 .parchment-stains {
     position: absolute;
     inset: 0;
@@ -61,6 +63,7 @@ body {
     width: 100%;
     height: 100%;
 }
+/* Layer 2 — Fine fiber / grain noise */
 .parchment-grain {
     position: absolute;
     inset: 0;
@@ -69,6 +72,7 @@ body {
     width: 100%;
     height: 100%;
 }
+/* Layer 3 — Laid paper weave (vertical + horizontal) */
 .parchment-weave-v {
     position: absolute;
     inset: 0;
@@ -93,6 +97,7 @@ body {
         var(--text-primary) 18px
     );
 }
+/* Layer 4 — Aged edge oxidation & vignette */
 .parchment-vignette-outer {
     position: absolute;
     inset: 0;
@@ -121,6 +126,12 @@ body {
     position: relative;
     background: var(--parchment);
 }
+.wireframe-box.shaded {
+    background: var(--parchment-shaded);
+}
+.wireframe-box.shaded > .wireframe-inner {
+    background: var(--parchment-shaded);
+}
 
 /* ---------- Section Title with Diamonds ---------- */
 .section-header {
@@ -147,6 +158,7 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.2em;
+    text-transform: none;
     white-space: nowrap;
     padding: 0 2px;
 }
@@ -159,13 +171,216 @@ body {
     margin-right: 2px;
 }
 
+/* ---------- Diamond Divider ---------- */
+.diamond-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 4px 0;
+    color: var(--text-faint);
+}
+.diamond-divider .diamond {
+    font-size: 5px;
+    line-height: 1;
+}
+.diamond-divider .rule {
+    height: 0.5px;
+    background: var(--border);
+    flex: 1;
+    max-width: 60px;
+    opacity: 0.3;
+}
+
 /* ==============================================
-   Layout — single column, centered
+   Layout
    ============================================== */
 .layout {
-    max-width: var(--content-max-width);
+    display: flex;
+    min-height: 100vh;
+    width: calc(100% - 64px);
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 40px 24px 48px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==============================================
+   Sidebar — shaded parchment panel
+   ============================================== */
+.sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    border-right: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.sidebar-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 24px 28px;
+    overflow-y: auto;
+    flex: 1;
+    width: 100%;
+}
+
+/* Avatar — wireframe framed */
+.sidebar-avatar-wrap {
+    position: relative;
+    margin-bottom: 22px;
+    flex-shrink: 0;
+}
+.sidebar-avatar-outer {
+    width: 150px;
+    height: 150px;
+    border: 1.5px solid var(--border);
+    padding: 3px;
+    box-shadow: 2px 2px 0px var(--shadow);
+    background: var(--parchment);
+    border-radius: 50%;
+}
+.sidebar-avatar-inner {
+    border: 0.5px solid var(--border);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--parchment-shaded);
+}
+.sidebar-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Name & Tagline */
+.sidebar-name {
+    font-family: var(--font-serif-cn);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+.sidebar-tagline {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Meta fields (monospace system labels) */
+.sidebar-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 6px;
+    width: 100%;
+    padding-top: 14px;
+}
+.sidebar-meta p {
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+}
+.sidebar-meta p .label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
+    margin-bottom: 2px;
+}
+
+/* Links */
+.sidebar-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-serif);
+    font-size: 0.78rem;
+    margin-bottom: 4px;
+}
+.sidebar-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.sidebar-links a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.sidebar-links .dot {
+    color: var(--text-faint);
+    font-size: 0.6rem;
+}
+
+/* Status indicator */
+.sidebar-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+.sidebar-status .led {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text-primary);
+    animation: ledPulse 2s ease-in-out infinite;
+}
+.sidebar-status span {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+@keyframes ledPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Bottom version label */
+.sidebar-version {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    margin-top: 4px;
+}
+
+/* ==============================================
+   Content Area
+   ============================================== */
+.content {
+    flex: 1;
+    max-width: none;
+    padding: 36px 0 48px;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -174,145 +389,12 @@ body {
 }
 
 /* ==============================================
-   Profile Header Card — info printed on parchment
+   Section Cards (wireframe-box wrappers)
    ============================================== */
-.profile-card {
-    margin-top: 8px;
+.section-card {
+    width: min(var(--content-max-width), calc(100% - 64px));
+    margin: 0 auto;
 }
-.profile-card-inner {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    padding: 28px 32px;
-}
-
-/* Avatar — wireframe framed */
-.profile-avatar-wrap {
-    flex-shrink: 0;
-}
-.profile-avatar-outer {
-    width: 100px;
-    height: 100px;
-    border: 1.5px solid var(--border);
-    padding: 3px;
-    box-shadow: 2px 2px 0px var(--shadow);
-    background: var(--parchment);
-    border-radius: 50%;
-}
-.profile-avatar-inner {
-    border: 0.5px solid var(--border);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: var(--parchment-shaded);
-}
-.profile-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Name & Tagline */
-.profile-text {
-    min-width: 0;
-}
-.profile-name {
-    font-family: var(--font-serif-cn);
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    margin-bottom: 2px;
-}
-.profile-tagline {
-    font-family: var(--font-serif);
-    font-size: 0.82rem;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 8px;
-    font-style: italic;
-}
-
-/* Meta — inline row */
-.profile-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-    font-family: var(--font-serif);
-    font-size: 0.72rem;
-    color: var(--text-secondary);
-    line-height: 1.4;
-}
-.profile-meta .label {
-    font-family: var(--font-mono);
-    font-size: 0.52rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-faint);
-    margin-right: 2px;
-}
-.profile-meta .meta-sep {
-    color: var(--text-faint);
-    font-size: 0.55rem;
-}
-
-/* Links — inline row */
-.profile-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-serif);
-    font-size: 0.78rem;
-    flex-wrap: wrap;
-}
-.profile-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-.profile-links a:hover {
-    color: var(--text-primary);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-.profile-links .dot {
-    color: var(--text-faint);
-    font-size: 0.6rem;
-}
-
-/* Status indicator inline */
-.profile-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    border: 1px solid var(--border);
-    padding: 1px 8px;
-    opacity: 0.65;
-    font-family: var(--font-mono);
-    font-size: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-.profile-status .led {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--text-primary);
-    animation: ledPulse 2s ease-in-out infinite;
-}
-@keyframes ledPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
-/* ==============================================
-   Section Cards
-   ============================================== */
 .section-card .card-pad {
     padding: 24px 28px 28px;
 }
@@ -371,8 +453,13 @@ body {
     padding: 18px 0;
     border-bottom: 0.5px solid var(--border-light);
 }
-.pub-item:first-of-type { padding-top: 0; }
-.pub-item:last-of-type { border-bottom: none; padding-bottom: 0; }
+.pub-item:first-of-type {
+    padding-top: 0;
+}
+.pub-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 .pub-venue {
     font-family: var(--font-mono);
     font-size: 0.58rem;
@@ -417,8 +504,13 @@ body {
     padding: 20px 0;
     border-bottom: 0.5px solid var(--border-light);
 }
-.project-item:first-of-type { padding-top: 0; }
-.project-item:last-of-type { border-bottom: none; padding-bottom: 0; }
+.project-item:first-of-type {
+    padding-top: 0;
+}
+.project-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 .project-tags {
     display: flex;
     gap: 7px;
@@ -473,8 +565,13 @@ body {
     color: var(--text-secondary);
     line-height: 1.5;
 }
-.activity-item:first-of-type { padding-top: 0; }
-.activity-item:last-of-type { border-bottom: none; padding-bottom: 0; }
+.activity-item:first-of-type {
+    padding-top: 0;
+}
+.activity-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 .activity-item strong {
     color: var(--text-primary);
     font-weight: 600;
@@ -500,7 +597,7 @@ body {
    ============================================== */
 footer {
     text-align: center;
-    padding: 4px 0;
+    padding: 14px 0;
     font-family: var(--font-mono);
     font-size: 0.55rem;
     font-weight: 700;
@@ -524,52 +621,70 @@ footer {
 /* ==============================================
    Responsive
    ============================================== */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .layout {
-        padding: 24px 12px 36px;
-        gap: 20px;
-    }
-    .profile-card-inner {
         flex-direction: column;
-        text-align: center;
-        gap: 16px;
-        padding: 24px 20px;
+        min-height: auto;
+        width: 100%;
     }
-    .profile-avatar-outer {
-        width: 80px;
-        height: 80px;
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1.5px solid var(--border);
+        box-shadow: 0px 2px 0px var(--shadow);
     }
-    .profile-meta {
-        justify-content: center;
+    .sidebar-inner {
+        padding: 36px 24px 28px;
+        overflow-y: visible;
     }
-    .profile-links {
-        justify-content: center;
+    .sidebar-avatar-outer {
+        width: 110px;
+        height: 110px;
     }
 
+    .content {
+        max-width: 100%;
+        padding: 24px 0 36px;
+        gap: 20px;
+    }
+    .section-card {
+        width: auto;
+        margin: 0 16px;
+    }
     .section-card .card-pad {
         padding: 20px 18px 22px;
-    }
-    .section-header h2 {
-        font-size: 0.7rem;
-        letter-spacing: 0.15em;
     }
 
     .edu-item {
         flex-direction: column;
         gap: 4px;
     }
-    .edu-year { min-width: auto; }
+    .edu-year {
+        min-width: auto;
+    }
 }
 
-@media (max-width: 400px) {
-    .layout {
-        padding: 16px 8px 28px;
-        gap: 16px;
-    }
-    .profile-card-inner {
-        padding: 18px 14px;
+@media (max-width: 600px) {
+    .section-card {
+        margin: 0 8px;
     }
     .section-card .card-pad {
-        padding: 16px 14px 18px;
+        padding: 18px 14px 20px;
+    }
+    .section-header h2 {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+    }
+    .sidebar-avatar-outer {
+        width: 90px;
+        height: 90px;
+    }
+    .sidebar-name {
+        font-size: 1.05rem;
+    }
+    footer {
+        padding: 10px 0;
     }
 }

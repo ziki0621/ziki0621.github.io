@@ -36,209 +36,230 @@
         <div class="parchment-vignette-inner" aria-hidden="true"></div>
     </div>
 
-    <!-- ==================== Single-Column Layout ==================== -->
     <div class="layout">
 
-        <!-- Header — profile info printed on parchment -->
-        <header class="profile-card wireframe-box">
-            <div class="wireframe-inner profile-card-inner">
+        <!-- ==================== Left Sidebar ==================== -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
 
                 <!-- Avatar -->
-                <div class="profile-avatar-wrap">
-                    <div class="profile-avatar-outer">
-                        <div class="profile-avatar-inner">
-                            <img src="images/photo-avatar.jpg" alt="Zhang Ziqi" class="profile-avatar">
+                <div class="sidebar-avatar-wrap">
+                    <div class="sidebar-avatar-outer">
+                        <div class="sidebar-avatar-inner">
+                            <img src="images/photo-avatar.jpg" alt="Zhang Ziqi" class="sidebar-avatar">
                         </div>
                     </div>
                 </div>
 
-                <div class="profile-text">
-                    <h1 class="profile-name">Zhang Ziqi</h1>
-                    <p class="profile-tagline">Linguistics meets <em>artificial intelligence.</em></p>
+                <h1 class="sidebar-name">Zhang Ziqi</h1>
+                <p class="sidebar-tagline">Linguistics meets <em>artificial intelligence.</em></p>
 
-                    <div class="profile-meta">
-                        <span><span class="label">Currently</span> B.A. Linguistics &amp; AI &middot; PolyU</span>
-                        <span class="meta-sep">|</span>
-                        <span><span class="label">Research</span> LLM Interpretability &middot; Cognitive Science</span>
-                    </div>
-
-                    <div class="profile-links">
-                        <a href="mailto:zhangziqi.bram@gmail.com">Email</a>
-                        <span class="dot">&middot;</span>
-                        <a href="https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra" target="_blank">Google Scholar</a>
-                        <span class="dot">&middot;</span>
-                        <a href="https://github.com/ziki0621" target="_blank">GitHub</a>
-                        <span class="profile-status">
-                            <span class="led"></span>
-                            <span>Online</span>
-                        </span>
-                    </div>
+                <!-- Diamond Divider -->
+                <div class="diamond-divider">
+                    <span class="diamond">&#9671;</span>
+                    <span class="rule"></span>
+                    <span class="diamond">&#9671;</span>
                 </div>
+
+                <!-- Meta -->
+                <div class="sidebar-meta">
+                    <p><span class="label">Currently</span> B.A. Linguistics &amp; AI &middot; PolyU</p>
+                    <p><span class="label">Research</span> LLM Interpretability &middot; Cognitive Science</p>
+                </div>
+
+                <!-- Diamond Divider -->
+                <div class="diamond-divider">
+                    <span class="diamond">&#9671;</span>
+                    <span class="rule"></span>
+                    <span class="diamond">&#9671;</span>
+                </div>
+
+                <!-- Links -->
+                <div class="sidebar-links">
+                    <a href="mailto:zhangziqi.bram@gmail.com">Email</a>
+                    <span class="dot">&middot;</span>
+                    <a href="https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra" target="_blank">Google Scholar</a>
+                    <span class="dot">&middot;</span>
+                    <a href="https://github.com/ziki0621" target="_blank">GitHub</a>
+                </div>
+
+                <!-- Status -->
+                <div class="sidebar-status">
+                    <span class="led"></span>
+                    <span>Online</span>
+                </div>
+
+                <!-- Version -->
+                <div class="sidebar-version">SYS_VER &mdash; 2.0.0</div>
 
             </div>
-        </header>
+        </aside>
 
-        <!-- About Me -->
-        <div class="wireframe-box section-card">
-            <div class="wireframe-inner card-pad">
-                <div class="section-header">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="section-number">00</span>
-                    <h2>About Me</h2>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-                <p class="content-bio">
-                    Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.
-                </p>
-            </div>
-        </div>
+        <!-- ==================== Right Content ==================== -->
+        <main class="content">
 
-        <!-- Education -->
-        <div id="work" class="wireframe-box section-card">
-            <div class="wireframe-inner card-pad">
-                <div class="section-header">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="section-number">01</span>
-                    <h2>Education</h2>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-                <div class="edu-item fade-in">
-                    <div class="edu-year">2022 – 2026</div>
-                    <div class="edu-detail">
-                        <h3>The Hong Kong Polytechnic University</h3>
-                        <p class="edu-sub">B.A. Linguistics &amp; Translation &middot; AI &amp; Data Analytics (Secondary Major)</p>
-                        <p class="edu-extra">Coursework: Machine Learning, AI, Data Structures, NLP</p>
+            <!-- About Me -->
+            <div class="wireframe-box section-card">
+                <div class="wireframe-inner card-pad">
+                    <div class="section-header">
+                        <span class="diamond">&#9671;</span>
+                        <span class="rule"></span>
+                        <span class="section-number">00</span>
+                        <h2>About Me</h2>
+                        <span class="rule"></span>
+                        <span class="diamond">&#9671;</span>
                     </div>
+                    <p class="content-bio">
+                        Nice to meet you! I'm a Year 4 undergraduate student exploring LLM interpretability, multimodal models, and the intersection of cognitive science with large language models. Based at the Hong Kong Polytechnic University.
+                    </p>
                 </div>
             </div>
-        </div>
 
-        <!-- Publications -->
-        <div id="research" class="wireframe-box section-card">
-            <div class="wireframe-inner card-pad">
-                <div class="section-header">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="section-number">02</span>
-                    <h2>Publications</h2>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-                <div class="pub-item fade-in">
-                    <div class="pub-venue">EMNLP 2025</div>
-                    <div class="pub-content">
-                        <h3><a href="https://aclanthology.org/2025.emnlp-main.961/" target="_blank">PhonoThink: Improving Large Language Models' Reasoning on Chinese Phonological Ambiguities</a></h3>
-                        <p class="pub-authors">Jianfei Ma, Zhaoxin Feng, Emmanuele Chersoni, Huacheng Song, <strong>Ziqi Zhang</strong></p>
+            <!-- Education -->
+            <div id="work" class="wireframe-box section-card">
+                <div class="wireframe-inner card-pad">
+                    <div class="section-header">
+                        <span class="diamond">&#9671;</span>
+                        <span class="rule"></span>
+                        <span class="section-number">01</span>
+                        <h2>Education</h2>
+                        <span class="rule"></span>
+                        <span class="diamond">&#9671;</span>
                     </div>
-                </div>
-                <div class="pub-item fade-in">
-                    <div class="pub-venue">BlackboxNLP 2025</div>
-                    <div class="pub-content">
-                        <h3><a href="https://aclanthology.org/2025.blackboxnlp-1.20/" target="_blank">From BERT to LLMs: Comparing and Understanding Chinese Classifier Prediction in Language Models</a></h3>
-                        <p class="pub-authors"><strong>Ziqi Zhang</strong>, Jianfei Ma, Emmanuele Chersoni, Jieshun You, Zhaoxin Feng</p>
+                    <div class="edu-item fade-in">
+                        <div class="edu-year">2022 – 2026</div>
+                        <div class="edu-detail">
+                            <h3>The Hong Kong Polytechnic University</h3>
+                            <p class="edu-sub">B.A. Linguistics &amp; Translation &middot; AI &amp; Data Analytics (Secondary Major)</p>
+                            <p class="edu-extra">Coursework: Machine Learning, AI, Data Structures, NLP</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Projects -->
-        <div id="writing" class="wireframe-box section-card">
-            <div class="wireframe-inner card-pad">
-                <div class="section-header">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="section-number">03</span>
-                    <h2>Projects</h2>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-                <div class="project-item fade-in">
-                    <div class="project-tags">
-                        <span>Benchmark</span><span>Multilingual</span><span>CoT</span>
+            <!-- Publications -->
+            <div id="research" class="wireframe-box section-card">
+                <div class="wireframe-inner card-pad">
+                    <div class="section-header">
+                        <span class="diamond">&#9671;</span>
+                        <span class="rule"></span>
+                        <span class="section-number">02</span>
+                        <h2>Publications</h2>
+                        <span class="rule"></span>
+                        <span class="diamond">&#9671;</span>
                     </div>
-                    <h3>IntEx-Bench: A Unified Evaluation Benchmark</h3>
-                    <p>Designed a 7,000+ entry multilingual benchmark with dual evaluation framework — zero-shot CoT for explicit reasoning and contextual embedding extraction for implicit representation. Developed Semantic Feature-CoT framework to enhance compound word interpretability.</p>
-                    <span class="project-role">Project Leader &amp; First Author &middot; Oct 2025 – Feb 2026</span>
-                </div>
-                <div class="project-item fade-in">
-                    <div class="project-tags">
-                        <span>EEG-fMRI</span><span>Cognitive Science</span><span>LLM</span>
+                    <div class="pub-item fade-in">
+                        <div class="pub-venue">EMNLP 2025</div>
+                        <div class="pub-content">
+                            <h3><a href="https://aclanthology.org/2025.emnlp-main.961/" target="_blank">PhonoThink: Improving Large Language Models' Reasoning on Chinese Phonological Ambiguities</a></h3>
+                            <p class="pub-authors">Jianfei Ma, Zhaoxin Feng, Emmanuele Chersoni, Huacheng Song, <strong>Ziqi Zhang</strong></p>
+                        </div>
                     </div>
-                    <h3>Cognitive Processing in Healthy Aging — An EEG-fMRI Study</h3>
-                    <p>Extracted Surprisal and Entropy features from LLMs and aligned them with neuroimaging data to explore how computational linguistic indicators predict brain processing mechanisms across the lifespan.</p>
-                    <span class="project-role">Research Assistant &middot; PolyU &amp; HKU &middot; Mar 2026 – Present</span>
-                </div>
-                <div class="project-item fade-in">
-                    <div class="project-tags">
-                        <span>Multimodal</span><span>Healthcare</span><span>NLP+CV</span>
-                    </div>
-                    <h3>Intelligent Health Monitoring System (Multimodal LLMs)</h3>
-                    <p>Designed an elder care system integrating NLP, speech recognition, and computer vision. Advanced to Hong Kong Regional Finals of the China International College Students' Innovation Competition 2024.</p>
-                    <span class="project-role">Project Member &middot; CUHK &middot; May 2024 – Sep 2024</span>
-                </div>
-                <div class="project-item fade-in">
-                    <div class="project-tags">
-                        <span>Phonetics</span><span>Speech</span><span>Python</span>
-                    </div>
-                    <h3>Cantonese Spontaneous Speech Corpus &amp; Phonetics Research</h3>
-                    <p>Analyzed 40K+ interrogative sentences from Common Voice and OpenSLR. Built automated pipeline for batch audio analysis using Python, Praat, and Montreal Forced Aligner. Applied Linear Mixed-Effects Models for statistical analysis.</p>
-                    <span class="project-role">Project Leader &middot; PolyU &amp; HIT (Shenzhen) &middot; May 2025 – Dec 2025</span>
-                </div>
-                <div class="project-item fade-in">
-                    <div class="project-tags">
-                        <span>Syntactic Analysis</span><span>Probing</span><span>Psycholinguistics</span>
-                    </div>
-                    <h3>Mechanisms of LLMs in Processing Ambiguous Sentences</h3>
-                    <p>Constructed a 1,000+ Garden-path sentence dataset. Used Dependency-Trained Probes for deep syntactic analysis and minicons library for token-level log probability evaluation.</p>
-                    <span class="project-role">Research Assistant &middot; PolyU &middot; Aug 2025 – Dec 2025</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Beyond Research -->
-        <div class="wireframe-box section-card">
-            <div class="wireframe-inner card-pad">
-                <div class="section-header">
-                    <span class="diamond">&#9671;</span>
-                    <span class="rule"></span>
-                    <span class="section-number">04</span>
-                    <h2>Beyond Research</h2>
-                    <span class="rule"></span>
-                    <span class="diamond">&#9671;</span>
-                </div>
-                <div class="activity-item fade-in">
-                    <span class="activity-emoji">&#127925;</span>
-                    <div>
-                        <strong>First Flute</strong> — PolyU Orchestra
-                        <span class="activity-detail">Tsinghua-PolyU joint concert soloist &middot; HKGNA 2024 Music Festival</span>
-                    </div>
-                </div>
-                <div class="activity-item fade-in">
-                    <span class="activity-emoji">&#127758;</span>
-                    <div>
-                        <strong>Volunteer Teacher</strong> — Cambodia
-                        <span class="activity-detail">Teaching AI tools &amp; coding with Scratch and Google Teachable Machine</span>
-                    </div>
-                </div>
-                <div class="activity-item fade-in">
-                    <span class="activity-emoji">&#128203;</span>
-                    <div>
-                        <strong>Cultural Secretary</strong> — Hall Student Association
-                        <span class="activity-detail">Organized talent show, energy-saving day, and sports day</span>
+                    <div class="pub-item fade-in">
+                        <div class="pub-venue">BlackboxNLP 2025</div>
+                        <div class="pub-content">
+                            <h3><a href="https://aclanthology.org/2025.blackboxnlp-1.20/" target="_blank">From BERT to LLMs: Comparing and Understanding Chinese Classifier Prediction in Language Models</a></h3>
+                            <p class="pub-authors"><strong>Ziqi Zhang</strong>, Jianfei Ma, Emmanuele Chersoni, Jieshun You, Zhaoxin Feng</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer -->
-        <footer>
-            &copy; 2026 Zhang Ziqi &middot; <span id="busuanzi_value_site_pv"></span> visits
-        </footer>
+            <!-- Projects -->
+            <div id="writing" class="wireframe-box section-card">
+                <div class="wireframe-inner card-pad">
+                    <div class="section-header">
+                        <span class="diamond">&#9671;</span>
+                        <span class="rule"></span>
+                        <span class="section-number">03</span>
+                        <h2>Projects</h2>
+                        <span class="rule"></span>
+                        <span class="diamond">&#9671;</span>
+                    </div>
+                    <div class="project-item fade-in">
+                        <div class="project-tags">
+                            <span>Benchmark</span><span>Multilingual</span><span>CoT</span>
+                        </div>
+                        <h3>IntEx-Bench: A Unified Evaluation Benchmark</h3>
+                        <p>Designed a 7,000+ entry multilingual benchmark with dual evaluation framework — zero-shot CoT for explicit reasoning and contextual embedding extraction for implicit representation. Developed Semantic Feature-CoT framework to enhance compound word interpretability.</p>
+                        <span class="project-role">Project Leader &amp; First Author &middot; Oct 2025 – Feb 2026</span>
+                    </div>
+                    <div class="project-item fade-in">
+                        <div class="project-tags">
+                            <span>EEG-fMRI</span><span>Cognitive Science</span><span>LLM</span>
+                        </div>
+                        <h3>Cognitive Processing in Healthy Aging — An EEG-fMRI Study</h3>
+                        <p>Extracted Surprisal and Entropy features from LLMs and aligned them with neuroimaging data to explore how computational linguistic indicators predict brain processing mechanisms across the lifespan.</p>
+                        <span class="project-role">Research Assistant &middot; PolyU &amp; HKU &middot; Mar 2026 – Present</span>
+                    </div>
+                    <div class="project-item fade-in">
+                        <div class="project-tags">
+                            <span>Multimodal</span><span>Healthcare</span><span>NLP+CV</span>
+                        </div>
+                        <h3>Intelligent Health Monitoring System (Multimodal LLMs)</h3>
+                        <p>Designed an elder care system integrating NLP, speech recognition, and computer vision. Advanced to Hong Kong Regional Finals of the China International College Students' Innovation Competition 2024.</p>
+                        <span class="project-role">Project Member &middot; CUHK &middot; May 2024 – Sep 2024</span>
+                    </div>
+                    <div class="project-item fade-in">
+                        <div class="project-tags">
+                            <span>Phonetics</span><span>Speech</span><span>Python</span>
+                        </div>
+                        <h3>Cantonese Spontaneous Speech Corpus &amp; Phonetics Research</h3>
+                        <p>Analyzed 40K+ interrogative sentences from Common Voice and OpenSLR. Built automated pipeline for batch audio analysis using Python, Praat, and Montreal Forced Aligner. Applied Linear Mixed-Effects Models for statistical analysis.</p>
+                        <span class="project-role">Project Leader &middot; PolyU &amp; HIT (Shenzhen) &middot; May 2025 – Dec 2025</span>
+                    </div>
+                    <div class="project-item fade-in">
+                        <div class="project-tags">
+                            <span>Syntactic Analysis</span><span>Probing</span><span>Psycholinguistics</span>
+                        </div>
+                        <h3>Mechanisms of LLMs in Processing Ambiguous Sentences</h3>
+                        <p>Constructed a 1,000+ Garden-path sentence dataset. Used Dependency-Trained Probes for deep syntactic analysis and minicons library for token-level log probability evaluation.</p>
+                        <span class="project-role">Research Assistant &middot; PolyU &middot; Aug 2025 – Dec 2025</span>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Beyond Research -->
+            <div class="wireframe-box section-card">
+                <div class="wireframe-inner card-pad">
+                    <div class="section-header">
+                        <span class="diamond">&#9671;</span>
+                        <span class="rule"></span>
+                        <span class="section-number">04</span>
+                        <h2>Beyond Research</h2>
+                        <span class="rule"></span>
+                        <span class="diamond">&#9671;</span>
+                    </div>
+                    <div class="activity-item fade-in">
+                        <span class="activity-emoji">&#127925;</span>
+                        <div>
+                            <strong>First Flute</strong> — PolyU Orchestra
+                            <span class="activity-detail">Tsinghua-PolyU joint concert soloist &middot; HKGNA 2024 Music Festival</span>
+                        </div>
+                    </div>
+                    <div class="activity-item fade-in">
+                        <span class="activity-emoji">&#127758;</span>
+                        <div>
+                            <strong>Volunteer Teacher</strong> — Cambodia
+                            <span class="activity-detail">Teaching AI tools &amp; coding with Scratch and Google Teachable Machine</span>
+                        </div>
+                    </div>
+                    <div class="activity-item fade-in">
+                        <span class="activity-emoji">&#128203;</span>
+                        <div>
+                            <strong>Cultural Secretary</strong> — Hall Student Association
+                            <span class="activity-detail">Organized talent show, energy-saving day, and sports day</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                &copy; 2026 Zhang Ziqi &middot; <span id="busuanzi_value_site_pv"></span> visits
+            </footer>
+
+        </main>
     </div>
 
     <script src="assets/js/main.js"></script>
