@@ -77,6 +77,6 @@ function setLanguage(language) {
     languageToggle.setAttribute('aria-label', language === 'en' ? '切换为中文' : 'Switch to English');
 }
 
-languageToggle.addEventListener('click', () => {
+languageToggle?.addEventListener('click', () => {
     setLanguage(currentLanguage === 'en' ? 'zh' : 'en');
 });

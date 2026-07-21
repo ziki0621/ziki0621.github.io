@@ -8,10 +8,6 @@
 </head>
 <body>
 
-    <button class="language-toggle" type="button" aria-label="切换为中文" aria-pressed="false">
-        <span class="language-toggle-active">EN</span><span class="language-toggle-separator">/</span><span>中文</span>
-    </button>
-
     <!-- Hidden SVG filter definitions for parchment texture -->
     <svg width="0" height="0" style="position:absolute;overflow:hidden;" aria-hidden="true">
         <defs>
@@ -67,9 +63,9 @@
                 <!-- Links -->
                 <div class="sidebar-links">
                     <a href="mailto:zhangziqi.bram@gmail.com">Email</a>
-                    <span class="dot">&middot;</span>
+                    <span class="dot" aria-hidden="true">|</span>
                     <a href="https://scholar.google.com/citations?user=HLZpoHoAAAAJ&hl=zh-CN&oi=sra" target="_blank">Google Scholar</a>
-                    <span class="dot">&middot;</span>
+                    <span class="dot" aria-hidden="true">|</span>
                     <a href="https://github.com/ziki0621" target="_blank">GitHub</a>
                 </div>
 
@@ -86,6 +82,10 @@
                     <span class="led"></span>
                     <span data-i18n="online">Online</span>
                 </div>
+
+                <a class="easter-egg-link" href="gallery.html" aria-label="Open private photo archive">
+                    <span aria-hidden="true">◇</span> PRIVATE_ARCHIVE
+                </a>
 
                 <!-- Version -->
                 <div class="sidebar-version">SYS_VER &mdash; 2.0.0</div>
@@ -128,10 +128,10 @@
                         <span class="diamond">&#9671;</span>
                     </div>
                     <div class="edu-item fade-in">
-                        <div class="edu-year">2022 – 2026</div>
+                        <div class="edu-year">2022.8 - 2026.7</div>
                         <div class="edu-detail">
                             <h3 data-i18n="university">The Hong Kong Polytechnic University</h3>
-                            <p class="edu-sub" data-i18n="degree">B.A. Linguistics &amp; Translation &middot; AI &amp; Data Analytics (Secondary Major)</p>
+                            <p class="edu-sub"><em>B.A. Linguistics &amp; Translation</em><br><span class="edu-secondary">With a Secondary Major in <em>Artificial Intelligence &amp; Data Analytics</em></span></p>
                         </div>
                     </div>
                 </div>
@@ -231,24 +231,15 @@
                         <span class="diamond">&#9671;</span>
                     </div>
                     <div class="activity-item fade-in">
-                        <span class="activity-emoji">&#127925;</span>
                         <div>
                             <strong>First Flute</strong> — PolyU Orchestra
                             <span class="activity-detail">Tsinghua-PolyU joint concert soloist &middot; HKGNA 2024 Music Festival</span>
                         </div>
                     </div>
                     <div class="activity-item fade-in">
-                        <span class="activity-emoji">&#127758;</span>
                         <div>
                             <strong>Volunteer Teacher</strong> — Cambodia
                             <span class="activity-detail">Teaching AI tools &amp; coding with Scratch and Google Teachable Machine</span>
-                        </div>
-                    </div>
-                    <div class="activity-item fade-in">
-                        <span class="activity-emoji">&#128203;</span>
-                        <div>
-                            <strong>Cultural Secretary</strong> — Hall Student Association
-                            <span class="activity-detail">Organized talent show, energy-saving day, and sports day</span>
                         </div>
                     </div>
                 </div>
