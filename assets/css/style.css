@@ -443,11 +443,6 @@ body {
 .side-nav a b { font-weight: 700; }
 .side-nav a:hover { color: var(--text-primary); }
 
-.project-item:nth-of-type(2),
-.project-item:nth-of-type(4),
-.project-item:nth-of-type(6) {
-    display: none;
-}
 
 /* ==============================================
    Content Area
